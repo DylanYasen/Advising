@@ -36,8 +36,8 @@
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Menu <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="MySchedule.html">My Schedule</a></li>
+            <li><a href="index.php">Home</a></li>
+            <li><a href="MySchedule.php">My Schedule</a></li>
             <li><a href="#">Something else here</a></li>
             <li class="divider"></li>
             <li><a href="#">Log Out</a></li>
@@ -49,9 +49,22 @@
 </nav>
 
 <?php
-echo "<br>string";
-?>
 
+// Stage 1, vardump, watch all values passed
+var_dump($_POST);  echo("<br>");
+
+// Stage 2, DB setup
+
+include('src/CommonMethods.php');
+$debug = true;
+$COMMON = new Common($debug); // common methods
+
+$sql = "insert into test_data (`firstName`, `lastName`, `number`) values ('$_POST[first]', '$_POST[last]', '$_POST[number]')";
+$rs = $COMMON->executeQuery($sql, $_SERVER["SCRIPT_NAME"]);
+
+var_dump($_POST);  echo("<br>");
+
+?>
 
 <!-- Load javascript required for Bootstrap animation-->
 <script src="https://code.jquery.com/jquery.js"></script>
