@@ -8,7 +8,7 @@ class Common
 	function Common($debug)
 	{
 		$this->debug = $debug; 
-		$rs = $this->connect("AdvisingTimeTable"); // db name really here
+		$rs = $this->connect("yadikae1"); // db name really here
 		return $rs;
 	}
 
