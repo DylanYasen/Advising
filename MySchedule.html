@@ -11,6 +11,7 @@
 
 </head>
 
+
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -48,23 +49,104 @@
   </div><!-- /.container-fluid -->
 </nav>
 
+
+<!-- time table -->
 <body>
-  <?php
-var_dump($_POST);  echo("<br>");
+  <link rel="stylesheet" type = "text/css" href="css/timetable.css" >
+  
+  <table width="80%" align = "center" >
 
-// Stage 2, DB setup
+    <!-- days -->  
+    <div id ="head_nav"></div>
+      <tr>
+        <th>Time</th>
+        <th>Monday</th>
+        <th>Tuesday</th>
+        <th>Wednesday</th>
+        <th>Thrusday</th>
+        <th>Friday</th>
+      </tr>
+    </div>
 
-include('src/CommonMethods.php');
-$debug = true;
-$COMMON = new Common($debug); // common methods
+     <tr>
+        <th>9:00 - 10:00</th>
+        
+            <td>Physics-1</td>
+            <td>English</td>
+            <td title="No Class" class="Holiday"></td>
+            <td>Chemestry-1</td>
+            <td>Alzebra</td>
+        </div>
+    </tr>
 
+    <tr>
+        <th>10:00 - 11:00</th>
+        
+            <td>Physics-1</td>
+            <td>English</td>
+            <td title="No Class" class="Holiday"></td>
+            <td>Chemestry-1</td>
+            <td>Alzebra</td>
+        </div>
+    </tr>
 
-//$sql = "insert into test_data (`firstName`, `lastName`, `number`) values ('$_POST[first]', '$_POST[last]', '$_POST[number]')";
-//$rs = $COMMON->executeQuery($sql, $_SERVER["<index class="html"></index>"]);
+    <tr>
+        <th>11:00 - 12:00</td>
+        
+            <td>Math-2</td>
+            <td>Chemestry-2</td>
+            <td>Physics-1</td>
+            <td>Hindi</td>
+            <td>English</td>
+        </div>
+    </tr>
 
-?>
+    <tr>
+        <th>12:00 - 01:00</td>
+        
+            <td>Hindi</td>
+            <td>English</td>
+            <td>Math-1</td>
+            <td>Chemistry</td>
+            <td>Physics</td>
+        </div>
+    </tr>
+
+    <tr>
+        <th>01:00 - 02:00</td>
+        
+            <td>Cumm. Skill</td>
+            <td>Sports</td>
+            <td>English</td>
+            <td>Computer Lab</td>
+            <td>Header</td>
+        </div>
+    </tr>
+
+    <tr>
+        <th>02:00 - 03:00</td>
+        
+            <td>Header</td>
+            <td>Header</td>
+            <td>Header</td>
+            <td>Header</td>
+            <td>Header</td>
+        </div>
+    </tr>
+
+    <tr>
+        <th>03:00 - 04:00</td>
+        
+            <td>Header</td>
+            <td>Header</td>
+            <td>Header</td>
+            <td>Header</td>
+            <td>Header</td>
+        </div>
+    </tr>
+
+  </table>
 </body>
-
 
 
 <!-- Load javascript required for Bootstrap animation-->
