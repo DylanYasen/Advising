@@ -59,9 +59,11 @@ include('src/CommonMethods.php');
 $debug = true;
 $COMMON = new Common($debug); // common methods
 
+//$name = 
 
-$sql = "insert into test_data (`StudentName`, `StartTime`, `EndTime`,'AptType') values ('1', '2', '2','2')";
-$rs = $COMMON->executeQuery($sql, $_SERVER["SCRIPT_NAME"]);
+
+//$sql = "insert into test_data (`StudentName`, `StartTime`, `EndTime`,'AptType') values ('1', '2', '2','2')";
+//$rs = $COMMON->executeQuery($sql, $_SERVER["SCRIPT_NAME"]);
 
 var_dump($_POST);  echo("<br>");
 
