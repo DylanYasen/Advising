@@ -67,6 +67,8 @@ $COMMON = new Common($debug); // common methods
 
 var_dump($_POST);  echo("<br>");
 
+
+
 ?>
 
 <!-- Load javascript required for Bootstrap animation-->

@@ -19,6 +19,10 @@ class Common
 		$conn = @mysql_connect("studentdb.gl.umbc.edu", "yadikae1", "yadikae1","AdvisingTimeTable") or die("Could not connect to MySQL");
 		$rs = @mysql_select_db($db, $conn) or die("Could not connect select $db database");
 		$this->conn = $conn; 
+
+		while($row = $rs->fetch_assoc()) {
+        echo "id: " . $row["id"]. " - Name: " . $row["StudentName"]. " " . $row["StartTime"]." " . $row["EndTime"]. "<br>";
+    }
 	}
 
 // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
