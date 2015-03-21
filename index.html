@@ -10,7 +10,7 @@
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
 
 </head>
-
+  
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -48,23 +48,9 @@
   </div><!-- /.container-fluid -->
 </nav>
 
-<body>
-  <?php
-var_dump($_POST);  echo("<br>");
-
-// Stage 2, DB setup
-
-include('src/CommonMethods.php');
-$debug = true;
-$COMMON = new Common($debug); // common methods
-
-
-//$sql = "insert into test_data (`firstName`, `lastName`, `number`) values ('$_POST[first]', '$_POST[last]', '$_POST[number]')";
-//$rs = $COMMON->executeQuery($sql, $_SERVER["<index class="html"></index>"]);
-
+<?php
+echo "string";
 ?>
-</body>
-
 
 
 <!-- Load javascript required for Bootstrap animation-->
