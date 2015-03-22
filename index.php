@@ -60,24 +60,19 @@ $debug = true;
 $COMMON = new Common($debug); // common methods
 
 $sql = "SELECT ID, StudentName, StartTime, EndTime, AptType FROM AdvisingTimeTable";
-$result = $COMMON->executeQuery($sql);
+$result = $COMMON->executeQuery($sql,$_SERVER["SCRIPT_NAME"]);
     echo "'$result'";
 
-    /*
-    while($row = $result->fetch_assoc()) {
+    while($row = mysql_fetch_row($result) {
         echo "id: " . $row["id"]. " - Name: " . $row["StudentName"]. " " . $row["StartTime"]." " . $row["EndTime"]. "<br>";
     }
-    */
+    
 //$name = 
-
 
 //$sql = "insert into test_data (`StudentName`, `StartTime`, `EndTime`,'AptType') values ('1', '2', '2','2')";
 //$rs = $COMMON->executeQuery($sql, $_SERVER["SCRIPT_NAME"]);
 
 var_dump($_POST);  echo("<br>");
-
-
-
 ?>
 
 <!-- Load javascript required for Bootstrap animation-->
