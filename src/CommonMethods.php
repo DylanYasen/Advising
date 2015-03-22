@@ -23,10 +23,10 @@ class Common
 
 // %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
 	
-	function executeQuery($sql, $filename) // execute query
+	function executeQuery($sql) // execute query
 	{
 		if($this->debug == true) { echo("$sql <br>\n"); }
-		$rs = mysql_query($sql, $this->conn) or die("Could not execute query '$sql' in $filename"); 
+		$rs = mysql_query($sql, $this->conn) or die("Could not execute query '$sql' "); 
 		return $rs;
 	}			
 
