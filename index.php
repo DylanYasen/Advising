@@ -64,13 +64,11 @@ $result = $COMMON->executeQuery($sql,$_SERVER["SCRIPT_NAME"]);
     echo "'$result'";
 
     while($row = mysql_fetch_row($result)) {
-        echo "id: " . $row["id"]. " - Name: " . $row["StudentName"]. " " . $row["StartTime"]." " . $row["EndTime"]. "<br>";
+        //echo "id: " . $row["id"]. " - Name: " . $row["StudentName"]. " " . $row["StartTime"]." " . $row["EndTime"]. "<br>";
       
-        echo("<tr>");
-      foreach ($row as $element)
-      { 
+      echo("<tr>");
+      foreach ($row as $element)s
        echo("<td>".$element."</td><br>");
-      }
       echo("</tr>");
     }
     
