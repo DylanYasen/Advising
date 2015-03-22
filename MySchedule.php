@@ -78,8 +78,7 @@ echo "<body>";
         $time = $startTime. ":00 am";
 
         if($startTime > 12){
-            $startTime -= 12;
-            $time =  $startTime. ":00 pm";
+            $time =  ($startTime-12). ":00 pm";
         }
 
         echo "<th>$time</th>";
