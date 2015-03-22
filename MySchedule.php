@@ -126,22 +126,19 @@ $result = $COMMON->executeQuery($sql,$_SERVER["SCRIPT_NAME"]);
 
                                 // match start time
                                 if($dataStartTime == $t){
-                                    echo("Start".$studentName);
+                                    echo("Start".$studentName."</td>");
                                     //break;
                                 }
 
                                 // match end time
                                 else if($dataEndTime == $t){
-                                    echo("End");
+                                    echo("End"."</td>");
                                     //break;
                                 }
                             }
-
-                            
                             //echo("<td>".$row[5]."</td><br>");
                         }
                         echo "</td>";
-
                     }
 
             echo "</th>";
