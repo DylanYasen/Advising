@@ -69,7 +69,7 @@ $result = $COMMON->executeQuery($sql,$_SERVER["SCRIPT_NAME"]);
         echo("<tr>");
       foreach ($row as $element)
       { 
-       echo("<td>".$element."</td>");
+       echo("<td>".$element."</td><br>");
       }
       echo("</tr>");
     }
