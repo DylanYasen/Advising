@@ -127,13 +127,13 @@ $result = $COMMON->executeQuery($sql,$_SERVER["SCRIPT_NAME"]);
                                 // match start time
                                 if($dataStartTime == $t){
                                     echo("Start".$studentName);
-                                    break;
+                                    //break;
                                 }
 
                                 // match end time
                                 else if($dataEndTime == $t){
                                     echo("End");
-                                    break;
+                                    //break;
                                 }
                             }
 
