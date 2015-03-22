@@ -110,7 +110,7 @@ $result = $COMMON->executeQuery($sql,$_SERVER["SCRIPT_NAME"]);
                             $dataDay = $row[5];
                             $dataStartTime = $row[2];
                             $dataEndTime = $row[3];
-                            $dataAptType = $row[];
+                            $dataAptType = $row[4];
 
                             if($dataDay == $day){
 
