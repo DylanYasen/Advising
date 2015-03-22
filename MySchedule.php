@@ -64,7 +64,7 @@ $result = $COMMON->executeQuery($sql,$_SERVER["SCRIPT_NAME"]);
         //echo "id: " . $row["id"]. " - Name: " . $row["StudentName"]. " " . $row["StartTime"]." " . $row["EndTime"]. "<br>";
       
       echo("<tr>");
-        echo("<td>".$row["StudentName"]."</td><br>");
+        echo("<td>".$row[1]."</td><br>");
         //foreach ($row as $element)
             //echo("<td>".$element."</td><br>");
       echo("</tr>");
@@ -72,7 +72,7 @@ $result = $COMMON->executeQuery($sql,$_SERVER["SCRIPT_NAME"]);
 
 
 //<!-- time table -->
-echo "<body>";
+  echo "<body>";
   echo"<link rel='stylesheet' type = 'text/css' href='css/timetable.css' >";
   
   echo"<table width='80%' align = 'center' >";
@@ -90,11 +90,11 @@ echo "<body>";
     echo"</div>";
 
     $st = 9;
-    for($i = 0; $i < 8; $i++){
+    for($t = 0; $t < 8; $t++){
 
         echo "<tr>";
 
-            $startTime = $st + $i;
+            $startTime = $st + $t;
             $time = $startTime. ":00 am";
 
             if($startTime > 12){
@@ -104,10 +104,36 @@ echo "<body>";
             echo "<th>";
                 echo $time;
 
-                    for($j = 0; $j < 5; $j++){
-                        echo "<td>";
-                        echo "</td>";
+                    for($day = 0; $day < 5; $day++){
+
+                        while($row = mysql_fetch_row($result)) {
+                            $dataDay = $row[5];
+                            $dataStartTime = $row[2];
+                            $dataEndTime = $row[3];
+                            $dataAptType = $row[];
+
+                            if($dataDay == $day){
+
+                                // match start time
+                                if($dataStartTime == $t){
+                                    echo("<td>"."Start"."</td><br>");
+                                    break;
+                                }
+
+                                // match end time
+                                else if($dataEndTime == $t){
+                                    echo("<td>"."End"."</td><br>");
+                                    break;
+                                }
+                            }
+
+                            //echo("<td>".$row[5]."</td><br>");
+                        }
+
+                       // echo "<td>";
+                       // echo "</td>";
                     }
+
             echo "</th>";
         echo "</tr>";
     }
