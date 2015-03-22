@@ -74,14 +74,14 @@ echo "<body>";
 
         echo "<tr>";
 
-        $time = " '$startTime + $i'. ':00' ";
+        $time = ($startTime + $i). ":00";
 
         if($i > 3)
-            $time = " '$startTime + $i - 12'. ':00' ";
+            $time =  ($startTime + $i - 12) . ":00";
 
         echo "<th>$time</th>";
 
-            
+
 
         echo "</tr>";
     }
