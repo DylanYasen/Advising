@@ -60,6 +60,13 @@ $sql = "SELECT ID, StudentName, StartTime, EndTime, AptType FROM AdvisingTimeTab
 $result = $COMMON->executeQuery($sql,$_SERVER["SCRIPT_NAME"]);
     echo $result;
 
+    $counter = 0;
+    while($r = mysql_fetch_row($result)) {
+        $data[$counter] = $r; 
+        $counter++;
+    }
+
+
     /*
     while($row = mysql_fetch_row($result)) {
         //echo "id: " . $row["id"]. " - Name: " . $row["StudentName"]. " " . $row["StartTime"]." " . $row["EndTime"]. "<br>";
@@ -108,19 +115,12 @@ $result = $COMMON->executeQuery($sql,$_SERVER["SCRIPT_NAME"]);
 
                     for($day = 0; $day < 5; $day++){
 
-                        while($row = mysql_fetch_row($result)) {
+                        foreach ($data as $row) {
                             $dataDay = $row[5];
                             $dataStartTime = $row[2];
                             $dataEndTime = $row[3];
                             $dataAptType = $row[4];
-
-                            /*
-                            echo("<i>".$dataDay."<i>");
-                            echo("<i>".$dataStartTime."<i>");
-                            echo("<i>".$dataEndTime."<i>");
-                            echo("<i>".$dataAptType."<i>");
-                            */
-
+                        
                             if($dataDay == $day){
 
                                 // match start time
