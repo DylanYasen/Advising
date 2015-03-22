@@ -63,7 +63,7 @@ $sql = "SELECT ID, StudentName, StartTime, EndTime, AptType FROM AdvisingTimeTab
 $result = $COMMON->executeQuery($sql,$_SERVER["SCRIPT_NAME"]);
     echo "'$result'";
 
-    while($row = mysql_fetch_row($result) {
+    while($row = @mysql_fetch_row($result) {
         echo "id: " . $row["id"]. " - Name: " . $row["StudentName"]. " " . $row["StartTime"]." " . $row["EndTime"]. "<br>";
     }
     
