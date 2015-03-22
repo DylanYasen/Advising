@@ -112,10 +112,10 @@ $result = $COMMON->executeQuery($sql,$_SERVER["SCRIPT_NAME"]);
                             $dataEndTime = $row[3];
                             $dataAptType = $row[4];
 
-                            echo($dataDay);
-                            echo($dataStartTime);
-                            echo($dataEndTime);
-                            echo($dataAptType);
+                            echo("<i>".$dataDay."<i>");
+                            echo("<i>".$dataStartTime."<i>");
+                            echo("<i>".$dataEndTime."<i>");
+                            echo("<i>".$dataAptType."<i>");
 
                             if($dataDay == $day){
 
