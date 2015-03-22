@@ -139,10 +139,10 @@ $result = $COMMON->executeQuery($sql,$_SERVER["SCRIPT_NAME"]);
                                 }
                             }
 
+                            echo "</td>";
                             //echo("<td>".$row[5]."</td><br>");
                         }
 
-                        echo "</td>";
 
                     }
 
