@@ -61,9 +61,13 @@ $COMMON = new Common($debug); // common methods
 
 $sql = "SELECT ID, StudentName, StartTime, EndTime, AptType FROM AdvisingTimeTable";
 $result = $COMMON->executeQuery($sql);
+    echo "'$result'";
+
+    /*
     while($row = $result->fetch_assoc()) {
         echo "id: " . $row["id"]. " - Name: " . $row["StudentName"]. " " . $row["StartTime"]." " . $row["EndTime"]. "<br>";
     }
+    */
 //$name = 
 
 
