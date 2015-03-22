@@ -58,7 +58,7 @@ echo "<body>";
   echo"<table width='80%' align = 'center' >";
 
     //<!-- days -->  
-    echo"<div id ='head_nav'></div>";
+    echo"<div id ='head_nav'>";
     echo"<tr>";
     echo"<th>Time</th>";
     echo"<th>Monday</th>";
@@ -68,6 +68,23 @@ echo "<body>";
     echo"<th>Friday</th>";
     echo"</tr>";
     echo"</div>";
+
+    $startTime = 9;
+    for($i = 0; $i < 5; $i++){
+
+        echo "<tr>";
+
+        $time = " '$startTime + $i'. ':00' ";
+
+        if($i > 3)
+            $time = " '$startTime + $i - 12'. ':00' ";
+
+        echo "<th>$time</th>";
+
+            
+
+        echo "</tr>";
+    }
 
     /*
      <tr>

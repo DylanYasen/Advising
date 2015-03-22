@@ -22,7 +22,7 @@
         <span class="icon-bar"></span>
       </button>
       <img href="umbc.edu" class="navbar-brand"  src="res/logo.png" >
-      
+            
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
