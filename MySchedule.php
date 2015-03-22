@@ -70,7 +70,7 @@ echo "<body>";
     echo"</div>";
 
     $startTime = 9;
-    for($i = 0; $i < 5; $i++){
+    for($i = 0; $i < 8; $i++){
 
         echo "<tr>";
 
