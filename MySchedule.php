@@ -51,6 +51,26 @@
 
 
 <?php
+
+include('src/CommonMethods.php');
+$debug = true;
+$COMMON = new Common($debug); // common methods
+
+$sql = "SELECT ID, StudentName, StartTime, EndTime, AptType FROM AdvisingTimeTable";
+$result = $COMMON->executeQuery($sql,$_SERVER["SCRIPT_NAME"]);
+    echo "'$result'";
+
+    while($row = mysql_fetch_row($result)) {
+        //echo "id: " . $row["id"]. " - Name: " . $row["StudentName"]. " " . $row["StartTime"]." " . $row["EndTime"]. "<br>";
+      
+      echo("<tr>");
+        echo("<td>".$row['StudentName']."</td><br>");
+        //foreach ($row as $element)
+            //echo("<td>".$element."</td><br>");
+      echo("</tr>");
+    }
+
+
 //<!-- time table -->
 echo "<body>";
   echo"<link rel='stylesheet' type = 'text/css' href='css/timetable.css' >";
@@ -74,25 +94,21 @@ echo "<body>";
 
         echo "<tr>";
 
-        $startTime = $st + $i;
-        $time = $startTime. ":00 am";
+            $startTime = $st + $i;
+            $time = $startTime. ":00 am";
 
-        if($startTime > 12){
-            $time =  ($startTime-12). ":00 pm";
-        }
-
-        echo "<th>";
-        echo $time;
-
-            for($j = 0; $j < 5; $j++){
-                echo "<td>";
-                echo "</td>";
+            if($startTime > 12){
+                $time =  ($startTime-12). ":00 pm";
             }
-             
-        echo "</th>";
 
+            echo "<th>";
+                echo $time;
 
-
+                    for($j = 0; $j < 5; $j++){
+                        echo "<td>";
+                        echo "</td>";
+                    }
+            echo "</th>";
         echo "</tr>";
     }
 
