@@ -89,7 +89,7 @@ $result = $COMMON->executeQuery($sql,$_SERVER["SCRIPT_NAME"]);
     //<!-- days -->  
     echo"<div id ='head_nav'>";
     echo"<tr>";
-    echo"<th>Time</th>";
+    echo"<th>Time<input type='button' onclick='window.print()' /></th>";
     echo"<th>Monday</th>";
     echo"<th>Tuesday</th>";
     echo"<th>Wednesday</th>";
@@ -116,24 +116,23 @@ $result = $COMMON->executeQuery($sql,$_SERVER["SCRIPT_NAME"]);
                     for($day = 0; $day < 5; $day++){
                         echo "<td>";
                         foreach ($data as $row) {
-                            echo "<td>";
                             $studentName = $row[1];
                             $dataStartTime = $row[2];
                             $dataEndTime = $row[3];
-                            $dataAptType = $row[4];
+                            $dataAptType = $row[4]; 
                             $dataDay = $row[5];
                         
                             if($dataDay == $day){
 
                                 // match start time
                                 if($dataStartTime == $t){
-                                    echo("Start".$studentName."</td>");
+                                    echo("Start".$studentName);
                                     //break;
                                 }
 
                                 // match end time
                                 else if($dataEndTime == $t){
-                                    echo("End"."</td>");
+                                    echo("End");
                                     //break;
                                 }
                             }
