@@ -58,7 +58,7 @@ $COMMON = new Common($debug); // common methods
 
 $sql = "SELECT ID, StudentName, StartTime, EndTime, AptType FROM AdvisingTimeTable";
 $result = $COMMON->executeQuery($sql,$_SERVER["SCRIPT_NAME"]);
-    echo "'$result'";
+    echo $result;
 
     /*
     while($row = mysql_fetch_row($result)) {
