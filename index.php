@@ -65,6 +65,13 @@ $result = $COMMON->executeQuery($sql,$_SERVER["SCRIPT_NAME"]);
 
     while($row = mysql_fetch_row($result)) {
         echo "id: " . $row["id"]. " - Name: " . $row["StudentName"]. " " . $row["StartTime"]." " . $row["EndTime"]. "<br>";
+      
+        echo("<tr>");
+      foreach ($row as $element)
+      { 
+       echo("<td>".$element."</td>");
+      }
+      echo("</tr>");
     }
     
 //$name = 
