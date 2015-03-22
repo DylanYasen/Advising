@@ -20,7 +20,9 @@ class Common
 		$rs = @mysql_select_db($db, $conn) or die("Could not connect select $db database");
 		$this->conn = $conn; 
 
-		while($row = $rs->fetch_assoc()) {
+		$sql = "SELECT ID, StudentName, StartTime, EndTime, AptType FROM AdvisingTimeTable";
+		$result = $conn->query($sql);
+		while($row = $result->fetch_assoc()) {
         echo "id: " . $row["id"]. " - Name: " . $row["StudentName"]. " " . $row["StartTime"]." " . $row["EndTime"]. "<br>";
     }
 	}
