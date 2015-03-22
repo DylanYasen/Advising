@@ -67,7 +67,7 @@ $result = $COMMON->executeQuery($sql,$_SERVER["SCRIPT_NAME"]);
         //echo "id: " . $row["id"]. " - Name: " . $row["StudentName"]. " " . $row["StartTime"]." " . $row["EndTime"]. "<br>";
       
       echo("<tr>");
-      foreach ($row as $element)s
+      foreach ($row as $element)
        echo("<td>".$element."</td><br>");
       echo("</tr>");
     }
