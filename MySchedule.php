@@ -53,12 +53,12 @@
 <?php
 //<!-- time table -->
 echo "<body>";
-  echo"<link rel="stylesheet" type = "text/css" href="css/timetable.css" >";
+  echo"<link rel='stylesheet' type = 'text/css' href='css/timetable.css' >";
   
-  echo"<table width="80%" align = "center" >";
+  echo"<table width='80%' align = 'center' >";
 
     //<!-- days -->  
-    echo"<div id ="head_nav"></div>";
+    echo"<div id ='head_nav'></div>";
     echo"<tr>";
     echo"<th>Time</th>";
     echo"<th>Monday</th>";
