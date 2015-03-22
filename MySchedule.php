@@ -69,12 +69,12 @@ echo "<body>";
     echo"</tr>";
     echo"</div>";
 
-    $startTime = 9;
+    $st = 9;
     for($i = 0; $i < 8; $i++){
 
         echo "<tr>";
 
-        $startTime += $i;
+        $startTime = $st + $i;
         $time = $startTime. ":00 am";
 
         if($startTime > 12){
