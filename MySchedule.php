@@ -81,7 +81,12 @@ echo "<body>";
             $time =  ($startTime-12). ":00 pm";
         }
 
-        echo "<th>$time</th>";
+        echo "<th>";
+        echo $time;
+             echo "<td>";
+             echo "empty";
+             echo "</td>";
+        echo "</th>";
 
 
 
