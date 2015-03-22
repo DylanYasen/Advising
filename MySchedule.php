@@ -116,16 +116,17 @@ $result = $COMMON->executeQuery($sql,$_SERVER["SCRIPT_NAME"]);
                     for($day = 0; $day < 5; $day++){
 
                         foreach ($data as $row) {
-                            $dataDay = $row[5];
+                            $studentName = $row[1];
                             $dataStartTime = $row[2];
                             $dataEndTime = $row[3];
                             $dataAptType = $row[4];
+                            $dataDay = $row[5];
                         
                             if($dataDay == $day){
 
                                 // match start time
                                 if($dataStartTime == $t){
-                                    echo("<td>Start</td>");
+                                    echo("<td>Start".$studentName."</td>");
                                     break;
                                 }
 
