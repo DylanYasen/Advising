@@ -83,9 +83,12 @@ echo "<body>";
 
         echo "<th>";
         echo $time;
-             echo "<td>";
-             echo "empty";
-             echo "</td>";
+
+            for($i = 0; $i < 4; $i++){
+                echo "<td>";
+                echo "</td>";
+            }
+             
         echo "</th>";
 
 
