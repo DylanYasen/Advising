@@ -50,24 +50,26 @@
 </nav>
 
 
-<!-- time table -->
-<body>
-  <link rel="stylesheet" type = "text/css" href="css/timetable.css" >
+<?php
+//<!-- time table -->
+echo "<body>";
+  echo"<link rel="stylesheet" type = "text/css" href="css/timetable.css" >";
   
-  <table width="80%" align = "center" >
+  echo"<table width="80%" align = "center" >";
 
-    <!-- days -->  
-    <div id ="head_nav"></div>
-      <tr>
-        <th>Time</th>
-        <th>Monday</th>
-        <th>Tuesday</th>
-        <th>Wednesday</th>
-        <th>Thrusday</th>
-        <th>Friday</th>
-      </tr>
-    </div>
+    //<!-- days -->  
+    echo"<div id ="head_nav"></div>";
+    echo"<tr>";
+    echo"<th>Time</th>";
+    echo"<th>Monday</th>";
+    echo"<th>Tuesday</th>";
+    echo"<th>Wednesday</th>";
+    echo"<th>Thrusday</th>";
+    echo"<th>Friday</th>";
+    echo"</tr>";
+    echo"</div>";
 
+    /*
      <tr>
         <th>9:00 - 10:00</th>
         
@@ -144,10 +146,10 @@
             <td>Header</td>
         </div>
     </tr>
-
-  </table>
-</body>
-
+    */
+  echo "</table>";
+echo"</body>";
+?>
 
 <!-- Load javascript required for Bootstrap animation-->
 <script src="https://code.jquery.com/jquery.js"></script>
