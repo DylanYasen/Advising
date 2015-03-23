@@ -69,7 +69,7 @@
             <input type="checkbox" value="remember-me"> Remember me
           </label>
         </div>
-        <button class="btn btn-lg btn-primary btn-block" type="submit" action = "login.php" method ="post" >Sign in</button>
+        <button class="btn btn-lg btn-primary btn-block" type="submit" >Sign in</button>
       </form>
 
     </div> <!-- /container -->
@@ -78,7 +78,7 @@
     <!--<script src="../../assets/js/ie10-viewport-bug-workaround.js"></script> -->
 
 <?php
-
+/*
 // Stage 1, vardump, watch all values passed
 var_dump($_POST);  echo("<br>");
 
@@ -98,7 +98,7 @@ $result = $COMMON->executeQuery($sql,$_SERVER["SCRIPT_NAME"]);
        echo("<td>".$element."</td><br>");
       echo("</tr>");
     }
-    
+
 //$name = 
 
 //$sql = "insert into test_data (`StudentName`, `StartTime`, `EndTime`,'AptType') values ('1', '2', '2','2')";
@@ -107,6 +107,7 @@ $result = $COMMON->executeQuery($sql,$_SERVER["SCRIPT_NAME"]);
 var_dump($_POST);  echo("<br>");
 
 
+*/
 ?>
 
 <!-- Load javascript required for Bootstrap animation-->
