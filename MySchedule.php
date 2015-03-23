@@ -146,7 +146,7 @@ $result = $COMMON->executeQuery($sql,$_SERVER["SCRIPT_NAME"]);
 
                         if(!$hasApt){
                             echo "</td>";
-                            $hasApt = true;
+                            $hasApt = false;
                         }
                     }
 
