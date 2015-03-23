@@ -58,7 +58,7 @@
      <!--Sign In-->
     <div class="container">
 
-      <form class="form-signin"  Method ="POST" ACTION = "login.php">
+      <form class="form-signin"  Method ="post" ACTION = "login.php">
         <h2 class="form-signin-heading">Please sign in</h2>
         <label for="inputUsername" class="sr-only">Email address</label>
         <input type="username" id="inputUsername" class="form-control" placeholder="Username" required autofocus>
