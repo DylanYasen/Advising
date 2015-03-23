@@ -36,7 +36,7 @@ class Validator
 
 		$index = $this->CheckUsername($username);
 
-		if($index != -1{
+		if($index != -1){
 
 			if($this->CheckPassword($index, $password))
 				return true;
@@ -76,7 +76,7 @@ class Validator
 	function CheckPassword($index,$password){
 
 		var_dump($password);
-		
+
 
 
 		$p = $database[$index][3];
