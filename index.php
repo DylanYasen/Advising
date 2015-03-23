@@ -55,7 +55,7 @@
   </nav>
 
      <!--Sign In-->
-    <div class="container-fluid">
+    <div class="container">
 
       <form class="form-signin" action = "login.php" method ="post">
         <h2 class="form-signin-heading">Please sign in</h2>
