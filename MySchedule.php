@@ -1,3 +1,7 @@
+<?php
+session_start();
+?>
+
 <html>
 
 <head>
@@ -54,7 +58,7 @@
 
 <?php
 //echo "correct";
-session_start();
+
 
 var_dump($_SESSION['id']);
 var_dump($_SESSION['firstname']);

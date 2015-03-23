@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 //include('src/Validator.php');
 include('src/CommonMethods.php');
@@ -51,8 +52,7 @@ include('src/CommonMethods.php');
 			$ID = $r[0];
 
 			//echo "correct";
-			session_start();
-
+			
 			$_SESSION['firstname'] = $firstname;
 			$_SESSION['lastname'] = $lastname;
 			$_SESSION['id'] = $ID;
