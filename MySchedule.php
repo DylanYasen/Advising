@@ -41,8 +41,8 @@ session_start();
       <ul class="nav navbar-nav navbar-right">
 
         <?php
-            $_SESSION['firstname'] = $firstname;
-            $_SESSION['lastname'] = $lastname;
+            $firstname = $_SESSION['firstname'];
+            $lastname = $_SESSION['lastname']; 
             echo "<li><a href='#'>"."Welcome,".$_SESSION['firstname']." ". $_SESSION['lastname']."</a></li>";
         ?>
         
