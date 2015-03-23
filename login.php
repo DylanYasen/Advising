@@ -33,7 +33,7 @@ include('src/CommonMethods.php');
 	}
 	else
 	{
-		if($_POST['password'] == $result[])
+		if($_POST['password'] == $result)
 			echo "correct";
 
 		else
