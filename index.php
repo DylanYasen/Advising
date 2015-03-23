@@ -58,7 +58,7 @@
      <!--Sign In-->
     <div class="container">
 
-      <form class="form-signin"  Method ="post" ACTION = "login.php">
+      <form class="form-signin" action = "login.php" method ="post">
         <h2 class="form-signin-heading">Please sign in</h2>
         <label for="inputUsername" class="sr-only">Email address</label>
         <input type="text" id="inputUsername" class="form-control" placeholder="Username" required autofocus>
@@ -69,7 +69,7 @@
             <input type="checkbox" value="remember-me"> Remember me
           </label>
         </div>
-        <button class="btn btn-lg btn-primary btn-block" type="submit" value="Submit" >Sign in</button>
+        <button class="btn btn-lg btn-primary btn-block" type="submit" >Sign in</button>
       </form>
 
     </div> <!-- /container -->
