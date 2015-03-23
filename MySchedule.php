@@ -115,6 +115,7 @@ $result = $COMMON->executeQuery($sql,$_SERVER["SCRIPT_NAME"]);
             
                     for($day = 0; $day < 5; $day++){
                         echo "<td>";
+                        
                         foreach ($data as $row) {
                             $studentName = $row[1];
                             $dataStartTime = $row[2];
@@ -132,7 +133,7 @@ $result = $COMMON->executeQuery($sql,$_SERVER["SCRIPT_NAME"]);
 
                                 // match end time
                                 else if($dataEndTime == $t){
-                                    echo("End");
+                                    echo("End".$studentName);
                                     break;
                                 }
                             }
