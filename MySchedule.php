@@ -131,14 +131,14 @@ $result = $COMMON->executeQuery($sql,$_SERVER["SCRIPT_NAME"]);
                                 if($dataStartTime == $t){
                                     echo("Start".$studentName."</td>");
                                     $hasApt = true;
-                                    break;
+                                    //break;
                                 }
 
                                 // match end time
                                 else if($dataEndTime == $t){
                                     echo("End".$studentName."</td>");
                                     $hasApt = true;
-                                    break;
+                                    //break;
                                 }
                             }
                             //echo("<td>".$row[5]."</td><br>");
