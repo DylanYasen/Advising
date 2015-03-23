@@ -1,6 +1,6 @@
 <?php
 
-include('src/Validator.php');
+//include('src/Validator.php');
 include('src/CommonMethods.php');
 
 	var_dump($_POST);
@@ -10,7 +10,6 @@ include('src/CommonMethods.php');
 	/*
 	$VALIDATOR = new Validator($debug); 
 	*/
-
 
 	$COMMON = new Common($debug);
 
