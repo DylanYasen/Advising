@@ -39,15 +39,20 @@ session_start();
       </ul>
      
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="#">Login</a></li>
+
+        <?php
+            $_SESSION['firstname'] = $firstname;
+            $_SESSION['lastname'] = $lastname;
+            echo "<li><a href='#'>".$_SESSION['firstname']." ". $_SESSION['lastname']."Login</a></li>";
+        ?>
+        
         <li class="dropdown">
           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Menu <span class="caret"></span></a>
           <ul class="dropdown-menu" role="menu">
-            <li><a href="index.php">Home</a></li>
+            <li><a href="#">Home</a></li>
             <li><a href="MySchedule.php">My Schedule</a></li>
-            <li><a href="#">Something else here</a></li>
             <li class="divider"></li>
-            <li><a href="#">Log Out</a></li>
+            <li><a href="index.php">Log Out</a></li>
           </ul>
         </li>
       </ul>
@@ -58,8 +63,6 @@ session_start();
 
 <?php
 //echo "correct";
-
-
 var_dump($_SESSION['id']);
 var_dump($_SESSION['firstname']);
 var_dump($_SESSION['lastname']);
