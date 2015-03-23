@@ -59,9 +59,9 @@
     <div class="container">
 
       <form class="form-signin"  Method ="POST" ACTION = "login.php">
-        <h2 class="form-signin-heading">Advisor ID</h2>
-        <label for="inputEmail" class="sr-only">Email address</label>
-        <input type="email" id="inputEmail" class="form-control" placeholder="Username" required autofocus>
+        <h2 class="form-signin-heading">Please sign in</h2>
+        <label for="inputUsername" class="sr-only">Email address</label>
+        <input type="username" id="inputUsername" class="form-control" placeholder="Username" required autofocus>
         <label for="inputPassword" class="sr-only">Password</label>
         <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
         <div class="checkbox">
