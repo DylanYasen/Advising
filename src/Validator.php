@@ -23,7 +23,7 @@ class Validator
 
 		// get data from database
 		while ($r = mysql_fetch_row($result)) {
-			var_dump($r);
+			//var_dump($r);
 			$database[$databaseCount] = $r;
 			$databaseCount++;
 		}
@@ -61,6 +61,7 @@ class Validator
 		$count = 0;
 		foreach ($database as $row) {
 			var_dump($row[2]);
+			echo "<br>";
 			$count ++;
 			if($row[2] == $username)
 		 		return $count;  // return valid ID
