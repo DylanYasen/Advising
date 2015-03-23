@@ -55,7 +55,7 @@ class Validator
 
 	function CheckUsername($username){
 
-		var_dump($username);
+		//var_dump($username);
 
 
 		$count = 0;
@@ -65,6 +65,12 @@ class Validator
 			$count ++;
 			if($row[2] == $username)
 		 		return $count;  // return valid ID
+		}
+
+		foreach( $database as $key => $row)
+		{
+	  	  	echo $key;
+	   		echo $row[2];
 		}
 
 			/*
