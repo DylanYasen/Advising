@@ -20,9 +20,14 @@ include('src/CommonMethods.php');
 	$sql = "SELECT Password FROM Advisor WHERE Username = '$name'";
 	$result = $COMMON->executeQuery($sql,$_SERVER["SCRIPT_NAME"]);
 
-	var_dump($result[1]);
-	echo "<br>";
 	
+
+	foreach ($result as $element){
+		var_dump($element);
+		echo "<br>";
+	}
+        
+
 	if($result== NULL){
 		echo "username not found.";
 	}
