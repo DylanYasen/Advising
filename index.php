@@ -1,9 +1,7 @@
 <html>
 
 <head>
-   <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+
 <title>UMBC Advisor Console</title>
 
     <!-- Latest compiled and minified CSS -->
@@ -57,7 +55,7 @@
   </nav>
 
      <!--Sign In-->
-    <div class="container">
+    <div class="container-fluid">
 
       <form class="form-signin" action = "login.php" method ="post">
         <h2 class="form-signin-heading">Please sign in</h2>
