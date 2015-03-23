@@ -31,13 +31,13 @@ include('src/CommonMethods.php');
 		if($_POST['password'] == $row[0]){
 
 			echo "correct";
-			header("Location:MySchedule.php")
+			header("Location:MySchedule.php");
 		}
 
 		else{
 
 			echo "incorrect";
-			header("Location:index.php")
+			header("Location:index.php");
 		}
 	}
 
