@@ -59,7 +59,7 @@ class Validator
 
 
 		$count = 0;
-		foreach ($database as $row) {
+		foreach ($this->$database as $row) {
 			var_dump($row[2]);
 			echo "<br>";
 			$count ++;
@@ -67,6 +67,7 @@ class Validator
 		 		return $count;  // return valid ID
 		}
 
+		
 		foreach( $database as $key => $row)
 		{
 	  	  	echo $key;
@@ -87,9 +88,7 @@ class Validator
 
 		var_dump($password);
 
-
-
-		$p = $database[$index][3];
+		$p = $this->$database[$index][3];
 
 		if($password == $p)
 			return true;
