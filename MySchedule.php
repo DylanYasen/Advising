@@ -113,7 +113,7 @@ $result = $COMMON->executeQuery($sql,$_SERVER["SCRIPT_NAME"]);
             echo "<th>";
             echo $time;
             
-                    for($day = 0; $day < 6; $day++){
+                    for($day = 0; $day < 5; $day++){
                         echo "<td>";
 
                         $hasApt = false;
@@ -123,7 +123,7 @@ $result = $COMMON->executeQuery($sql,$_SERVER["SCRIPT_NAME"]);
                             $dataStartTime = $row[2];
                             $dataEndTime = $row[3];
                             $dataAptType = $row[4]; 
-                            $dataDay = $row[5];
+                            $dataDay = $row[5]; 
 
                             if($dataDay == $day){
 
