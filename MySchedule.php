@@ -43,7 +43,7 @@ session_start();
         <?php
             $_SESSION['firstname'] = $firstname;
             $_SESSION['lastname'] = $lastname;
-            echo "<li><a href='#'>".$_SESSION['firstname']." ". $_SESSION['lastname']."Login</a></li>";
+            echo "<li><a href='#'>"."Welcome,".$_SESSION['firstname']." ". $_SESSION['lastname']."</a></li>";
         ?>
         
         <li class="dropdown">
