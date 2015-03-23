@@ -9,10 +9,17 @@
   <!-- Optional theme -->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
 
+  <!-- Custom styles for sign in -->
+  <link href="signin.css" rel="stylesheet">
+
+
 </head>
-  
-<nav class="navbar navbar-default">
-  <div class="container-fluid">
+
+<body>
+
+  <!--Navigation Bar-->
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
@@ -45,18 +52,16 @@
         </li>
       </ul>
     </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
+    </div><!-- /.container-fluid -->
+  </nav>
 
-
-<body>
-
+     <!--Sign In-->
     <div class="container">
 
-      <form class="form-signin">
-        <h2 class="form-signin-heading">Please sign in</h2>
+      <form class="form-signin"  Method ="POST" ACTION = "login.php">
+        <h2 class="form-signin-heading">Advisor ID</h2>
         <label for="inputEmail" class="sr-only">Email address</label>
-        <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+        <input type="email" id="inputEmail" class="form-control" placeholder="Username" required autofocus>
         <label for="inputPassword" class="sr-only">Password</label>
         <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
         <div class="checkbox">
@@ -64,28 +69,18 @@
             <input type="checkbox" value="remember-me"> Remember me
           </label>
         </div>
-        <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
+        <button class="btn btn-lg btn-primary btn-block" type="submit" >Sign in</button>
       </form>
 
     </div> <!-- /container -->
 
-
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
-    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
-  </body>
-
-
-
-
-
-
+    <!--<script src="../../assets/js/ie10-viewport-bug-workaround.js"></script> -->
 
 <?php
 
 // Stage 1, vardump, watch all values passed
 var_dump($_POST);  echo("<br>");
-
-// Stage 2, DB setup
 
 include('src/CommonMethods.php');
 $debug = true;
@@ -110,6 +105,8 @@ $result = $COMMON->executeQuery($sql,$_SERVER["SCRIPT_NAME"]);
 //$rs = $COMMON->executeQuery($sql, $_SERVER["SCRIPT_NAME"]);
 
 var_dump($_POST);  echo("<br>");
+
+
 ?>
 
 <!-- Load javascript required for Bootstrap animation-->
@@ -118,4 +115,5 @@ var_dump($_POST);  echo("<br>");
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
 
+</body>
 </html>
