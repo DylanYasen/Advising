@@ -6,7 +6,7 @@ include('src/Validator.php');
 	$debug = true;
 	$VALIDATOR = new Validator($debug); 
 
-	if($VALIDATOR->Validate( $_POST['inputUsername'],$_POST['inputPassword'])){
+	if($VALIDATOR->Validate( $_POST['inputUsername'],$_POST['inputPassword']))
 		 header("index.php");
 
 	else
