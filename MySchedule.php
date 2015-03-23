@@ -114,9 +114,9 @@ $result = $COMMON->executeQuery($sql,$_SERVER["SCRIPT_NAME"]);
             echo $time;
             
                     for($day = 0; $day < 5; $day++){
-                        echo $day."/t";
                         echo "<td>";
 
+                        echo "for loop";
                         $hasApt = false;
                         
                         foreach ($data as $row) {
@@ -126,12 +126,15 @@ $result = $COMMON->executeQuery($sql,$_SERVER["SCRIPT_NAME"]);
                             $dataAptType = $row[4]; 
                             $dataDay = $row[5];
                         
+                            echo "foreach";
+
                             if($dataDay == $day){
 
                                 // match start time
                                 if($dataStartTime == $t){
                                     echo("Start".$studentName."</td>");
                                     $hasApt = true;
+                                    echo "break";
                                     break;
                                 }
 
@@ -139,6 +142,7 @@ $result = $COMMON->executeQuery($sql,$_SERVER["SCRIPT_NAME"]);
                                 else if($dataEndTime == $t){
                                     echo("End".$studentName."</td>");
                                     $hasApt = true;
+                                    echo "break";
                                     break;
                                 }
                             }
