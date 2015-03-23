@@ -41,9 +41,14 @@ include('src/CommonMethods.php');
 			$sql = "SELECT ID FROM Advisor WHERE Username = '$name'";
 			$rs3 = $COMMON->executeQuery($sql,$_SERVER["SCRIPT_NAME"]);
 
-			$firstname = mysql_fetch_row($rs)[0];
-			$lastname =  mysql_fetch_row($rs2)[0]
-			$ID = mysql_fetch_row($rs3)[0]
+			$r = mysql_fetch_row($rs);
+			$firstname =$r[0];
+
+			$r = mysql_fetch_row($rs2);
+			$lastname = $r[0];
+
+			$r = mysql_fetch_row($rs3);
+			$ID = $r[0];
 
 			//echo "correct";
 			session_start();
