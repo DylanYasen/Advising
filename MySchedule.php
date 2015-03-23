@@ -113,7 +113,7 @@ $result = $COMMON->executeQuery($sql,$_SERVER["SCRIPT_NAME"]);
             echo "<th>";
             echo $time;
             
-                    for($day = 0; $day < 5; $day++){
+                    for($day = 0; $day < 6; $day++){
                         echo "<td>";
 
                         $hasApt = false;
@@ -129,14 +129,14 @@ $result = $COMMON->executeQuery($sql,$_SERVER["SCRIPT_NAME"]);
 
                                 // match start time
                                 if($dataStartTime == $t){
-                                    echo("Start".$studentName."</td>");
+                                    echo("Start:".$studentName."</td>");
                                     $hasApt = true;
                                     break;
                                 }
 
                                 // match end time
                                 else if($dataEndTime == $t){
-                                    echo("End".$studentName."</td>");
+                                    echo("End:".$studentName."</td>");
                                     $hasApt = true;
                                     break;
                                 }
