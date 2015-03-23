@@ -21,7 +21,7 @@ class Validator
 
 		// get data from database
 		$counter = 0;
-		while ($r = mysql_fetch_row($database)) {
+		while ($r = mysql_fetch_row($result)) {
 
 			$database[$counter] = $r;
 			$counter++;
@@ -30,11 +30,11 @@ class Validator
 
 	function Validate($username,$password){
 
-		$index = CheckUsername($username);
+		$index = $this->CheckUsername($username);
 
 		if($index != -1){
-			
-			if(CheckPassword($index, $password))
+
+			if($this->CheckPassword($index, $password))
 				return true;
 			
 			else{
