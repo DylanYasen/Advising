@@ -11,6 +11,8 @@ class Validator
 
 	var $database;
 
+	var $databaseCount = 1;
+
 	function Validator($debug)
 	{
 		$COMMON = new Common($debug);
@@ -20,11 +22,10 @@ class Validator
 
 
 		// get data from database
-		$counter = 0;
 		while ($r = mysql_fetch_row($result)) {
 
-			$database[$counter] = $r;
-			$counter++;
+			$database[$databaseCount] = $r;
+			$databaseCount++;
 		}
 	}
 
@@ -51,11 +52,17 @@ class Validator
 
 	function CheckUsername($username){
 
+/*
 		$count = 0;
 		foreach ($database as $row) {
 			$count ++;
 			if($row[2] == $username)
 		 		return $count;  // return valid ID
+		}
+*/
+		for ($i = 1; $i < $databaseCount;i++ ){
+			if($database[i] == $username)
+		 		return $i;  // return valid ID
 		}
 
 		return -1;   // doesn't exist
