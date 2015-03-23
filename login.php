@@ -3,7 +3,7 @@
 //include('src/Validator.php');
 include('src/CommonMethods.php');
 
-	var_dump($_POST);
+	//var_dump($_POST);
 
 	$debug = true;
 
@@ -23,15 +23,22 @@ include('src/CommonMethods.php');
 	$row = mysql_fetch_row($result);
 
 	if($result== NULL){
-		echo "username not found.";
+		//echo "username not found.";
+		header("Location:index.php");
 	}
 	else
 	{
-		if($_POST['password'] == $row[0])
-			echo "correct";
+		if($_POST['password'] == $row[0]){
 
-		else
+			echo "correct";
+			header("Location:MySchedule.php")
+		}
+
+		else{
+
 			echo "incorrect";
+			header("Location:index.php")
+		}
 	}
 
 /*
