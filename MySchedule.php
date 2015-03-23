@@ -53,6 +53,9 @@
 
 
 <?php
+//echo "correct";
+session_start();
+
 var_dump($_SESSION['id']);
 var_dump($_SESSION['firstname']);
 var_dump($_SESSION['lastname']);
