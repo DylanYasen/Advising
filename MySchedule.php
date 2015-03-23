@@ -53,6 +53,9 @@
 
 
 <?php
+var_dump($_SESSION['id']);
+var_dump($_SESSION['firstname']);
+var_dump($_SESSION['lastname']);
 
 include('src/CommonMethods.php');
 $debug = true;

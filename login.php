@@ -20,6 +20,8 @@ include('src/CommonMethods.php');
 	$sql = "SELECT Password FROM Advisor WHERE Username = '$name'";
 	$result = $COMMON->executeQuery($sql,$_SERVER["SCRIPT_NAME"]);
 
+
+
 	$row = mysql_fetch_row($result);
 
 	if($result== NULL){
@@ -30,7 +32,26 @@ include('src/CommonMethods.php');
 	{
 		if($_POST['password'] == $row[0]){
 
+			$sql = "SELECT Firstname FROM Advisor WHERE Username = '$name'";
+			$rs = $COMMON->executeQuery($sql,$_SERVER["SCRIPT_NAME"]);
+
+			$sql = "SELECT Lastname FROM Advisor WHERE Username = '$name'";
+			$rs2 = $COMMON->executeQuery($sql,$_SERVER["SCRIPT_NAME"]);
+
+			$sql = "SELECT ID FROM Advisor WHERE Username = '$name'";
+			$rs3 = $COMMON->executeQuery($sql,$_SERVER["SCRIPT_NAME"]);
+
+			$firstname = mysql_fetch_row($rs)[0];
+			$lastname =  mysql_fetch_row($rs2)[0]
+			$ID = mysql_fetch_row($rs3)[0]
+
 			//echo "correct";
+			session_start();
+
+			$_SESSION['firstname'] = $firstname;
+			$_SESSION['lastname'] = $lastname;
+			$_SESSION['id'] = $ID;
+
 			header("Location:MySchedule.php");
 		}
 
