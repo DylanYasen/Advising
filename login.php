@@ -17,7 +17,7 @@ include('src/CommonMethods.php');
 
 	$name = $_POST['username'];
 
-	$sql = "SELECT Password FROM Advisor WHERE Username = '$name'  FROM Advisor";
+	$sql = "SELECT Password FROM Advisor WHERE Username = '$name'";
 	$result = $COMMON->executeQuery($sql,$_SERVER["SCRIPT_NAME"]);
 
 	var_dump($result);
