@@ -11,7 +11,7 @@ class Validator
 
 	var $database;
 
-	function Login($debug)
+	function Validator($debug)
 	{
 		$COMMON = new Common($debug);
 

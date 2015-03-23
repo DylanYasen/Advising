@@ -11,8 +11,6 @@
 
   <!-- Custom styles for sign in -->
   <link href="signin.css" rel="stylesheet">
-
-
 </head>
 
 <body>
