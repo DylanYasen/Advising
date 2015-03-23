@@ -66,7 +66,8 @@ class Validator
 		}
 */
 		for ($i = 1; $i < $databaseCount;$i++ ){
-			if($database[$i] == $username)
+			var_dump($database[$i]);
+			if($database[$i][2] == $username)
 		 		return $i;  // return valid ID
 		}
 
