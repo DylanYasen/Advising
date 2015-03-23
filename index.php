@@ -1,6 +1,9 @@
 <html>
 
 <head>
+   <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>UMBC Advisor Console</title>
 
     <!-- Latest compiled and minified CSS -->
@@ -61,7 +64,7 @@
         <label for="inputUsername" class="sr-only">Email address</label>
         <input type="text" name = "username" id="inputUsername" class="form-control" placeholder="Username" required autofocus>
         <label for="inputPassword"  class="sr-only">Password</label>
-        <input type="text" id="inputPassword" name = "password" class="form-control" placeholder="Password" required>
+        <input type="password" id="inputPassword" name = "password" class="form-control" placeholder="Password" required>
         <div class="checkbox">
           <label>
             <input type="checkbox" value="remember-me"> Remember me
