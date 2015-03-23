@@ -17,7 +17,9 @@ class Validator
 	{
 		$COMMON = new Common($debug);
 
-		$sql = "SELECT ID, Username, Password, Firstname, Lastname FROM Advisor";
+		//$sql = "SELECT ID, Username, Password, Firstname, Lastname FROM Advisor";
+
+		$sql = "SELECT Password FROM Advisor WHERE ID = '$id'  FROM Advisor";
 		$result = $COMMON->executeQuery($sql,$_SERVER["SCRIPT_NAME"]);
 
 
@@ -57,6 +59,11 @@ class Validator
 
 		//var_dump($username);
 
+		for(){
+
+		}
+
+
 
 		$count = 0;
 		foreach ($this->$database as $row) {
@@ -67,8 +74,9 @@ class Validator
 		 		return $count;  // return valid ID
 		}
 
-		
-		foreach( $database as $key => $row)
+
+
+		foreach( $this->$database as $key => $row)
 		{
 	  	  	echo $key;
 	   		echo $row[2];
