@@ -7,8 +7,8 @@ include('src/Validator.php');
 	$VALIDATOR = new Validator($debug); 
 
 	if($VALIDATOR->Validate( $_POST['inputUsername'],$_POST['inputPassword']))
-		 header("index.php");
+		 header("Location:index.php");
 
 	else
-		header("MySchedule.php");
+		header("Location:MySchedule.php");
 ?>
