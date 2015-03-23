@@ -60,7 +60,7 @@ class Validator
 
 		$count = 0;
 		foreach ($database as $row) {
-			var_dump($row);
+			var_dump($$row[2]);
 			$count ++;
 			if($row[2] == $username)
 		 		return $count;  // return valid ID
