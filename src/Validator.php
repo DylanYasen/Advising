@@ -21,7 +21,7 @@ class Validator
 
 		// get data from database
 		$counter = 0;
-		while ($r = mysql_fetch_row($Database)) {
+		while ($r = mysql_fetch_row($database)) {
 
 			$database[$counter] = $r;
 			$counter++;
@@ -32,7 +32,7 @@ class Validator
 
 		$index = CheckUsername($username);
 
-		if($index != -1)
+		if($index != -1){
 			
 			if(CheckPassword($index, $password))
 				return true;
@@ -41,6 +41,7 @@ class Validator
 				echo "Incorrect password";
 				return false;
 			}
+		}
 
 		else{
 			echo "User name does not exist";
