@@ -57,20 +57,21 @@ class Validator
 
 		var_dump($username);
 
-/*	
+
 		$count = 0;
 		foreach ($database as $row) {
 			$count ++;
 			if($row[2] == $username)
 		 		return $count;  // return valid ID
 		}
-*/
+
+			/*
 		for ($i = 1; $i < $databaseCount;$i++ ){
 			var_dump($database[$i]);
 			if($database[$i][2] == $username)
 		 		return $i;  // return valid ID
 		}
-
+		*/
 		return -1;   // doesn't exist
 	}
 
