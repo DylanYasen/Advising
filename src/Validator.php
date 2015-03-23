@@ -23,7 +23,7 @@ class Validator
 
 		// get data from database
 		while ($r = mysql_fetch_row($result)) {
-
+			var_dump($r)
 			$database[$databaseCount] = $r;
 			$databaseCount++;
 		}
