@@ -31,9 +31,12 @@ class Validator
 
 	function Validate($username,$password){
 
+		var_dump($username);
+		var_dump($password);
+
 		$index = $this->CheckUsername($username);
 
-		if($index != -1){
+		if($index != -1{
 
 			if($this->CheckPassword($index, $password))
 				return true;
@@ -52,7 +55,9 @@ class Validator
 
 	function CheckUsername($username){
 
-/*
+		var_dump($username);
+
+/*	
 		$count = 0;
 		foreach ($database as $row) {
 			$count ++;
@@ -69,6 +74,10 @@ class Validator
 	}
 
 	function CheckPassword($index,$password){
+
+		var_dump($password);
+		
+
 
 		$p = $database[$index][3];
 

@@ -1,7 +1,7 @@
 <?php
 
 include('src/Validator.php');
-	var_dump($_POST);
+	//var_dump($_POST);
 
 	$debug = true;
 	$VALIDATOR = new Validator($debug); 
