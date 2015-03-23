@@ -5,7 +5,7 @@ include('src/CommonMethods.php');
 
 	//var_dump($_POST);
 
-	$debug = true;
+	$debug = false;
 
 	/*
 	$VALIDATOR = new Validator($debug); 
