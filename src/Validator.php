@@ -31,8 +31,8 @@ class Validator
 
 	function Validate($username,$password){
 
-		var_dump($username);
-		var_dump($password);
+		//var_dump($username);
+		//var_dump($password);
 
 		$index = $this->CheckUsername($username);
 
@@ -60,6 +60,7 @@ class Validator
 
 		$count = 0;
 		foreach ($database as $row) {
+			var_dump($row);
 			$count ++;
 			if($row[2] == $username)
 		 		return $count;  // return valid ID
