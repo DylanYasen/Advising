@@ -3,12 +3,12 @@ session_start();
 
     include('src/CommonMethods.php');
 
-    $debug = true;
+    $debug = false;
     $COMMON = new Common($debug);
 
     $name = "yadi";
     $advisorID = $_SESSION['id'];
-    var_dump($advisorID);
+    //var_dump($advisorID);
 
     // ---- get advisor name info
     $sql = "SELECT Firstname FROM Advisor WHERE ID = '$advisorID'";
@@ -25,14 +25,14 @@ session_start();
     $rs = $COMMON->executeQuery($sql,$_SERVER["SCRIPT_NAME"]);
 
     $apts = $COMMON->getDataArray($rs);
-    var_dump($apts[1]);
+    //var_dump($apts[1]);
 
     // ---- group appointments ---- //
     $sql = "SELECT * FROM AppointmentGroup WHERE Advisor_ID = '$advisorID' ORDER BY Day ASC, StartTime ASC";
     $rs = $COMMON->executeQuery($sql,$_SERVER["SCRIPT_NAME"]);
 
     $groupApts = $COMMON->getDataArray($rs);
-    var_dump($groupApts);
+    //var_dump($groupApts);
 ?>
 
 <html>
@@ -282,6 +282,7 @@ echo"</body>";
                     <?php
 
                         foreach ($apts[1] as $apt) {
+                            var_dump($apt);
                             echo "<div class='panel-body'>$apt[3]</div>";
                             echo "<br>";
                         }
