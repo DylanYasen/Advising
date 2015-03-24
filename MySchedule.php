@@ -298,7 +298,7 @@ echo"</body>";
                                             $endTime = $apt[3];
                                             $endTime = substr($endTime,0,5);
 
-                                            echo "<li>$startTime." - ".$endTime</li>";
+                                            echo "<li>".$startTime." - ".$endTime."</li>";
                                             echo "<br>StudentID: ".$apt[5];
 
                                             $hasApt = true;
