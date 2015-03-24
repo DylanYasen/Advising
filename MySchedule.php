@@ -322,7 +322,9 @@ echo"</body>";
                                                     echo "<button type='button' class='btn btn-lg btn-info' data-toggle='popover' data-placement='bottom' title='Student Info'"; 
 
                                                         // get student info
-                                                        echo "data-content=sfgasdfasdfasdf\nasdfasdfasfasdfasdf";
+                                                        echo "data-content=sfgasdfasdfasdf
+                                                                asd
+                                                                fasdfasfasdfasdf";
 
                                                         echo "Name: ".$studentFullname;
                                                         echo "ID: ".$studentID;
