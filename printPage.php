@@ -107,3 +107,7 @@
     }
     echo "</ul>";
 ?>
+
+<script type="text/javascript">
+    window.print();
+</script>
