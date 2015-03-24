@@ -282,7 +282,7 @@ echo"</body>";
                     <?php
 
                         foreach ($apts[1] as $apt) {
-                            echo "<div class='panel-body'>'$apts[3][$apt]'</div>";
+                            echo "<div class='panel-body'>$apt[3]</div>";
                             echo "<br>";
                         }
                     ?>
