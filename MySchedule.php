@@ -25,7 +25,7 @@ session_start();
     $rs = $COMMON->executeQuery($sql,$_SERVER["SCRIPT_NAME"]);
 
     $apts = $COMMON->getDataArray($rs);
-    var_dump($apts);
+    //var_dump($apts);
 
     // ---- group appointments ---- //
     $sql = "SELECT * FROM AppointmentGroup WHERE Advisor_ID = '$advisorID' ORDER BY Day ASC, StartTime ASC";
@@ -300,11 +300,28 @@ echo"</body>";
                                             $endTime = $apt[3];
                                             $endTime = substr($endTime,0,5);
 
+                                            $studentID = $apt[5];
+
+                                            // get student info
+                                            $sql = "SELECT * FROM Student WHERE ID = '$studentID'";
+                                            $studentInfo = $COMMON->getDataArray();
+                                            var_dump($studentInfo);
+
+
+
                                             echo "<li >".$startTime." - ".$endTime."</li>";
                                             
                                             echo "<div class = 'container'>";
                                                     echo "<button type='button' class='btn btn-xs btn-info' data-toggle='popover' title='Popover title'"; 
-                                                        echo "data-content='And heres some amazing content. Its very ensaasdasdasdasdasddffffffffffffffffffffffffffffffffffffffgaging. Right?'>";
+
+                                                        // get student info
+                                                        echo "data-content=";
+
+
+
+                                                            
+                                                        echo ">";
+
                                                     echo "Detail</button>";
                                             echo "</div>";
 
