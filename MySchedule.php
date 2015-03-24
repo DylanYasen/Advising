@@ -282,8 +282,7 @@ echo"</body>";
                     <h3 class="panel-title">Monday 
                         <form action = "printPage.php" method ="post">
                             <?php
-                            echo "<input type='hidden' name = 'apts' value = $apts>";
-                            echo "<input type='hidden' name = 'groupApts' value = $groupApts>";
+                            echo "<input type='hidden' name = 'advisorID' value = $advisorID>";
                             echo "<input type='hidden' name = 'day' value = 1>";
                             echo "<button type='submit' class='btn btn-xs'>Print</button>";
                             ?>
