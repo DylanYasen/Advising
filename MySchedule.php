@@ -413,74 +413,6 @@ echo"</body>";
                     ?>
             </div>
         </div>
-         <div class = "<col-md-4">
-            <div class="panel panel-info">
-                <div class="panel-heading">
-                    <h3 class="panel-title">Monday</h3>
-                </div>
-                    <?php
-
-                        echo "<div class='panel-body'>";
-                        $hasApt = false;
-
-                                //var_dump($apts[1]);
-                                foreach ($apts as $apt) {
-
-                                    $day = $apt[1];
-                                    echo "<ul>";
-                                    
-                                        if($day == 1)
-                                        {
-                                            $startTime = $apt[2];
-                                            $startTime = substr($startTime,0,5);
-
-                                            $endTime = $apt[3];
-                                            $endTime = substr($endTime,0,5);
-
-                                            $studentID = $apt[5];
-
-                                            // get student info
-                                            $sql = "SELECT * FROM Student WHERE ID = '$studentID'";
-                                            $rs = $COMMON->executeQuery($sql,$_SERVER["SCRIPT_NAME"]);
-
-                                            $studentInfo = $COMMON->getDataArray($rs);
-                                            $studentInfo = $studentInfo[1];
-                                            $studentID = $studentInfo[0];
-                                            $studentFirstname = $studentInfo[1];
-                                            $studentLastname = $studentInfo[2];
-                                            $studentFullname = $studentFirstname." ".$studentLastname;
-                                            $studentMajor = $studentInfo[3];
-                                            $studentRank = $studentInfo[4];
-
-                                            echo "<li>".$startTime." - ".$endTime."</li>";
-                                            
-                                            // student info popover
-                                            echo "<div class = 'container'>";
-                                                    echo "<button type='button' class='btn btn-xs btn-info' data-toggle='popover' data-placement='bottom' title='Student Info' data-html='true' 
-                                                           data-content= 'Name: $studentFullname <br /> 
-                                                                           ID: $studentID <br />
-                                                                           Major: $studentMajor <br />
-                                                                           Rank: $studentRank <br />  ' >
-
-                                                            Detail</button>"; 
-
-                                            echo "</div>";
-
-                                            //echo "<a data-container='body' data-toggle='popover' data-placement='bottom' data-trigger='hover'>StudentID:$apt[5]</a>";
-                                            echo "<br>";
-                                            $hasApt = true;
-                                        }
-                                            
-
-                                    echo "</ul>";
-                                }
-
-                                if(!$hasApt)
-                                    echo "No Appointments";
-                        echo "</div>";
-                    ?>
-            </div>
-        </div>
 
          <div class = "<col-md-4">
             <div class="panel panel-info">
@@ -619,7 +551,76 @@ echo"</body>";
                     ?>
             </div>
         </div>
-        
+
+         <div class = "<col-md-4">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Monday</h3>
+                </div>
+                    <?php
+
+                        echo "<div class='panel-body'>";
+                        $hasApt = false;
+
+                                //var_dump($apts[1]);
+                                foreach ($apts as $apt) {
+
+                                    $day = $apt[1];
+                                    echo "<ul>";
+                                    
+                                        if($day == 1)
+                                        {
+                                            $startTime = $apt[2];
+                                            $startTime = substr($startTime,0,5);
+
+                                            $endTime = $apt[3];
+                                            $endTime = substr($endTime,0,5);
+
+                                            $studentID = $apt[5];
+
+                                            // get student info
+                                            $sql = "SELECT * FROM Student WHERE ID = '$studentID'";
+                                            $rs = $COMMON->executeQuery($sql,$_SERVER["SCRIPT_NAME"]);
+
+                                            $studentInfo = $COMMON->getDataArray($rs);
+                                            $studentInfo = $studentInfo[1];
+                                            $studentID = $studentInfo[0];
+                                            $studentFirstname = $studentInfo[1];
+                                            $studentLastname = $studentInfo[2];
+                                            $studentFullname = $studentFirstname." ".$studentLastname;
+                                            $studentMajor = $studentInfo[3];
+                                            $studentRank = $studentInfo[4];
+
+                                            echo "<li>".$startTime." - ".$endTime."</li>";
+                                            
+                                            // student info popover
+                                            echo "<div class = 'container'>";
+                                                    echo "<button type='button' class='btn btn-xs btn-info' data-toggle='popover' data-placement='bottom' title='Student Info' data-html='true' 
+                                                           data-content= 'Name: $studentFullname <br /> 
+                                                                           ID: $studentID <br />
+                                                                           Major: $studentMajor <br />
+                                                                           Rank: $studentRank <br />  ' >
+
+                                                            Detail</button>"; 
+
+                                            echo "</div>";
+
+                                            //echo "<a data-container='body' data-toggle='popover' data-placement='bottom' data-trigger='hover'>StudentID:$apt[5]</a>";
+                                            echo "<br>";
+                                            $hasApt = true;
+                                        }
+                                            
+
+                                    echo "</ul>";
+                                }
+
+                                if(!$hasApt)
+                                    echo "No Appointments";
+                        echo "</div>";
+                    ?>
+            </div>
+        </div>
+
         <div class = "<col-md-4">
             <div class="panel panel-info">
                 <div class="panel-heading">
