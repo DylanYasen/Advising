@@ -333,12 +333,13 @@ echo"</body>";
                                             echo "<br>";
                                             $hasApt = true;
                                         }
+                                }
 
                                 // group apt
                                 foreach ($groupApts as $apt) {
 
-                                    $day = $apt[1];
-                                    echo "<ul>";
+                                        $day = $apt[1];
+                                        echo "<ul>";
                                     
                                         if($day == 1)
                                         {
@@ -394,12 +395,12 @@ echo"</body>";
 
                                             //echo "<a data-container='body' data-toggle='popover' data-placement='bottom' data-trigger='hover'>StudentID:$apt[5]</a>";
                                             echo "<br>";
-                                            $hasApt = true;
+                                           */ $hasApt = true;
                                         }
                                             
                                     echo "</ul>";
-                                }
-                                */
+                            }
+
 
                                 if(!$hasApt)
                                     echo "No Appointments";
