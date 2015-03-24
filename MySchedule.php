@@ -236,6 +236,11 @@ $result = $COMMON->executeQuery($sql,$_SERVER["SCRIPT_NAME"]);
 echo"</body>";
 ?>
 
+<?php
+
+    $name = "yadi";
+?>
+
 <div class = "container">
     <div class = "row">
        
@@ -253,7 +258,9 @@ echo"</body>";
                 <div class="panel-heading">
                     <h3 class="panel-title">Tuesday</h3>
                 </div>
-                    <div class="panel-body">The client should continue with its request.</div>
+                    <?php
+                        echo "<div class='panel-body'>The client should continue with its request.</div>";
+                    ?>
             </div>
         </div>
 
@@ -283,8 +290,8 @@ echo"</body>";
                     <div class="panel-body">The client should continue with its request.</div>
             </div>
         </div>
+    
     </div>
-
 </div>
 
 <!-- Load javascript required for Bootstrap animation-->
