@@ -279,7 +279,7 @@ echo"</body>";
         <div class = "<col-sm-2 col-xs-2">
             <div class="panel panel-info">
                 <div class="panel-heading">
-                    <h3 class="panel-title">Monday <?php echo"<button type='button' class='btn btn-default'>Left</button>";?></h3>
+                    <h3 class="panel-title">Monday <?php echo"<button type='button' class='btn btn-xs'>Print</button>";?></h3>
                 </div>
                     <?php
                         echo "<div class='panel-body'>";
