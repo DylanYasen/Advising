@@ -72,9 +72,7 @@ session_start();
       <ul class="nav navbar-nav navbar-right">
 
         <?php
-            //$firstname = $_SESSION['firstname'];
-            //$lastname = $_SESSION['lastname']; 
-            echo "<li><a href='#'>"."Welcome, ".$_SESSION['firstname']." ". $_SESSION['lastname']."</a></li>";
+            echo "<li><a href='#'>"."Welcome, ".$advisorFirstname." ". $advisorLastname."</a></li>";
         ?>
         
         <li class="dropdown">
@@ -93,6 +91,7 @@ session_start();
 
 
 <?php
+/*
 include('src/CommonMethods.php');
 $debug = true;
 $COMMON = new Common($debug); // common methods
