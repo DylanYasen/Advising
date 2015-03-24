@@ -299,9 +299,8 @@ echo"</body>";
                                             $endTime = substr($endTime,0,5);
 
                                             echo "<li>".$startTime." - ".$endTime."</li>";
-                                            echo "StudentID: ".$apt[5];
-                                            echo "<br>";
-
+                                            echo "<a id='popover' data-trigger='hover'>'StudentID:'.$apt[5]</a>";
+                                            echo "<br>"
                                             $hasApt = true;
                                         }
                                             
