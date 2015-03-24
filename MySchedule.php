@@ -276,7 +276,7 @@ echo"</body>";
 <div class = "container">
     <div class = "row">
        
-        <div class = "<col-sm-3 col-xs-6">
+        <div class = "<col-md-4">
             <div class="panel panel-info">
                 <div class="panel-heading">
                     <h3 class="panel-title">Monday</h3>
@@ -319,7 +319,7 @@ echo"</body>";
                                             
                                             // student info popover
                                             echo "<div class = 'container'>";
-                                                    echo "<button type='button' class='btn btn-lg btn-info' data-toggle='popover' data-placement='bottom' title='Student Info' data-html='true' 
+                                                    echo "<button type='button' class='btn btn-xs btn-info' data-toggle='popover' data-placement='bottom' title='Student Info' data-html='true' 
                                                            data-content= 'Name: $studentFullname <br /> 
                                                                            ID: $studentID <br />
                                                                            Major: $studentMajor <br />
@@ -345,7 +345,7 @@ echo"</body>";
             </div>
         </div>
 
-         <div class = "col-sm-3 col-xs-6">
+         <div class = "col-md-4">
             <div class="panel panel-info">
                 <div class="panel-heading">
                     <h3 class="panel-title">Tuesday</h3>
@@ -356,7 +356,7 @@ echo"</body>";
             </div>
         </div>
 
-        <div class = "col-sm-3 col-xs-6">
+        <div class = "col-md-4">
             <div class="panel panel-info">
                 <div class="panel-heading">
                     <h3 class="panel-title">Wednesday</h3>
@@ -367,7 +367,7 @@ echo"</body>";
             </div>
         </div>
 
-        <div class = "col-sm-3 col-xs-6">
+        <div class = "col-md-4">
             <div class="panel panel-info">
                 <div class="panel-heading">
                     <h3 class="panel-title">Thrusday</h3>
@@ -378,7 +378,7 @@ echo"</body>";
             </div>
         </div>
 
-        <div class = "col-sm-3 col-xs-6">
+        <div class = "col-md-4">
             <div class="panel panel-info">
                 <div class="panel-heading">
                     <h3 class="panel-title">Friday</h3>
