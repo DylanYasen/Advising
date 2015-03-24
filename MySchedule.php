@@ -17,7 +17,6 @@ session_start();
 
 </head>
 
-
 <nav class="navbar navbar-default">
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
@@ -80,20 +79,6 @@ $result = $COMMON->executeQuery($sql,$_SERVER["SCRIPT_NAME"]);
         $data[$counter] = $r; 
         $counter++;
     }
-
-
-    /*
-    while($row = mysql_fetch_row($result)) {
-        //echo "id: " . $row["id"]. " - Name: " . $row["StudentName"]. " " . $row["StartTime"]." " . $row["EndTime"]. "<br>";
-      
-      echo("<tr>");
-        echo("<td>".$row[1]."</td><br>");
-        //foreach ($row as $element)
-            //echo("<td>".$element."</td><br>");
-      echo("</tr>");
-    }
-    */
-
 
 //<!-- time table -->
   echo "<body>";
@@ -250,6 +235,14 @@ $result = $COMMON->executeQuery($sql,$_SERVER["SCRIPT_NAME"]);
   echo "</table>";
 echo"</body>";
 ?>
+
+<div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">301 Moved Permanently</h3>
+        </div>
+        <div class="panel-body">The requested page has been permanently moved to a new location.</div>
+</div>
+
 
 <!-- Load javascript required for Bootstrap animation-->
 <script src="https://code.jquery.com/jquery.js"></script>
