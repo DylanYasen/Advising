@@ -26,84 +26,89 @@
     echo "<br>";
     echo "==============";
     echo "<ul>";
-    foreach ($apts as $apt) {
 
-    	$startTime = $apt[2];
-		$startTime = substr($startTime,0,5);
+    if($apts != NULL){
+         foreach ($apts as $apt) {
 
-		$endTime = $apt[3];
-		$endTime = substr($endTime,0,5);
+        $startTime = $apt[2];
+        $startTime = substr($startTime,0,5);
 
-		$studentID = $apt[5];
+        $endTime = $apt[3];
+        $endTime = substr($endTime,0,5);
 
-		// get student info
-		$sql = "SELECT * FROM Student WHERE ID = '$studentID'";
-		$rs = $COMMON->executeQuery($sql,$_SERVER["SCRIPT_NAME"]);
+        $studentID = $apt[5];
 
-		$studentInfo = $COMMON->getDataArray($rs);
-		$studentInfo = $studentInfo[1];
-		$studentID = $studentInfo[0];
-		$studentFirstname = $studentInfo[1];
-		$studentLastname = $studentInfo[2];
-		$studentFullname = $studentFirstname." ".$studentLastname;
-		$studentMajor = $studentInfo[3];
-		$studentRank = $studentInfo[4];
+        // get student info
+        $sql = "SELECT * FROM Student WHERE ID = '$studentID'";
+        $rs = $COMMON->executeQuery($sql,$_SERVER["SCRIPT_NAME"]);
 
-		echo "<li>Time: ".$startTime." - ".$endTime."</li>";
-    	echo "<li>Student Name: ".$studentFullname."</li>";
-    	echo "<li>ID: ".$studentID."</li>";
-    	echo "<li>Major: ".$studentMajor."</li>";
-    	echo "<li>Rank: ".$studentRank."</li>";
-    	echo "<br>"; 
+        $studentInfo = $COMMON->getDataArray($rs);
+        $studentInfo = $studentInfo[1];
+        $studentID = $studentInfo[0];
+        $studentFirstname = $studentInfo[1];
+        $studentLastname = $studentInfo[2];
+        $studentFullname = $studentFirstname." ".$studentLastname;
+        $studentMajor = $studentInfo[3];
+        $studentRank = $studentInfo[4];
+
+        echo "<li>Time: ".$startTime." - ".$endTime."</li>";
+        echo "<li>Student Name: ".$studentFullname."</li>";
+        echo "<li>ID: ".$studentID."</li>";
+        echo "<li>Major: ".$studentMajor."</li>";
+        echo "<li>Rank: ".$studentRank."</li>";
+        echo "<br>"; 
         echo "<br>";
-    	}
+        }
      echo "</ul>";
-
+    }
+   
     echo"<br>";
     echo "Group Advising";
     echo "<br>";
     echo "==============";
     echo "<ul>";
+    if($apts != NULL){
     foreach ($groupApts as $apt) {
 
-        $startTime = $apt[2];
-        $startTime = substr($startTime,0,5);    
+            $startTime = $apt[2];
+            $startTime = substr($startTime,0,5);    
 
-        echo "<li>Time: ".$startTime." - ".$endTime."</li>";
+            echo "<li>Time: ".$startTime." - ".$endTime."</li>";
 
-        $endTime = $apt[3];
-        $endTime = substr($endTime,0,5);
+            $endTime = $apt[3];
+            $endTime = substr($endTime,0,5);
 
-        $printedHeading = false;
+            $printedHeading = false;
 
-        // ID starts at 5th slot
-        for($i = 5; $i < 15; $i++ ){
-            $studentID = $apt[$i];
+            // ID starts at 5th slot
+            for($i = 5; $i < 15; $i++ ){
+                $studentID = $apt[$i];
 
-            if($studentID == NULL)
-                break;
+                if($studentID == NULL)
+                    break;
 
-             // get student info
-            $sql = "SELECT * FROM Student WHERE ID = '$studentID'";
-            $rs = $COMMON->executeQuery($sql,$_SERVER["SCRIPT_NAME"]);
+                 // get student info
+                $sql = "SELECT * FROM Student WHERE ID = '$studentID'";
+                $rs = $COMMON->executeQuery($sql,$_SERVER["SCRIPT_NAME"]);
 
-            $studentInfo = $COMMON->getDataArray($rs);
-            $studentInfo = $studentInfo[1];
-            $studentID = $studentInfo[0];
-            $studentFirstname = $studentInfo[1];
-            $studentLastname = $studentInfo[2];
-            $studentFullname = $studentFirstname." ".$studentLastname;
-            $studentMajor = $studentInfo[3];
-            $studentRank = $studentInfo[4];
+                $studentInfo = $COMMON->getDataArray($rs);
+                $studentInfo = $studentInfo[1];
+                $studentID = $studentInfo[0];
+                $studentFirstname = $studentInfo[1];
+                $studentLastname = $studentInfo[2];
+                $studentFullname = $studentFirstname." ".$studentLastname;
+                $studentMajor = $studentInfo[3];
+                $studentRank = $studentInfo[4];
 
-            echo "<li>Student Name: ".$studentFullname."</li>";
-            echo "<li>ID: ".$studentID."</li>";
-            echo "<li>Major: ".$studentMajor."</li>";
-            echo "<li>Rank: ".$studentRank."</li>";
+                echo "<li>Student Name: ".$studentFullname."</li>";
+                echo "<li>ID: ".$studentID."</li>";
+                echo "<li>Major: ".$studentMajor."</li>";
+                echo "<li>Rank: ".$studentRank."</li>";
+                echo "<br>";
+            }
+            echo "<br>";
             echo "<br>";
         }
-        echo "<br>";
-        echo "<br>";
     }
     echo "</ul>";
 ?>
