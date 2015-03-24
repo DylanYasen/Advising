@@ -235,36 +235,22 @@ $result = $COMMON->executeQuery($sql,$_SERVER["SCRIPT_NAME"]);
   echo "</table>";
 echo"</body>";
 ?>
+
 <div class = "container">
     <div class = "row">
-        
         <div class = "col-sm-6 col-xs-12">
-            <div class="panel panel-success">
+            <div class="panel panel-info">
                 <div class="panel-heading">
-                    <h3 class="panel-title">301 Moved Permanently</h3>
+                    <h3 class="panel-title">200 OK</h3>
                 </div>
-
-                        <div class = "col-sm-3 col-xs-6">
-                            <div class="panel panel-primary">
-                                    <div class="panel-heading">
-                                        <h3 class="panel-title">301 Moved Permanently</h3>
-                                           <div class="panel-body">The requested page has been permanently moved to a new location.</div>
-                                    </div>
-                            </div>
-                        </div>
-                    
-                        <div class = "col-sm-3 col-xs-6">
-                            <div class="panel panel-primary">
-                                <div class="panel-heading">
-                                    <h3 class="panel-title">301 Moved Permanently</h3>
-                                         <div class="panel-body">The requested page has been permanently moved to a new location.</div>
-                                </div>
-                            </div>
-                        </div>
-
+                
+                <ul>
+                    <li class="panel-body">apt1</li>
+                    <li class="divider"></li>
+                    <li class="panel-body">apt1</li>
+                </ul>
             </div>
         </div>
-       
     </div>
 </div>
 
