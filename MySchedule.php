@@ -292,14 +292,14 @@ echo"</body>";
                                     
                                         if($day == 1)
                                         {
-                                            $startTime = $apt[3];
+                                            $startTime = $apt[2];
                                             $startTime = substr($startTime,0,5);
 
-                                            $endTime = $apt[4];
+                                            $endTime = $apt[3];
                                             $endTime = substr($endTime,0,5);
 
                                             echo "<li>$startTime." - ".$endTime</li>";
-                                            echo "StudentID: ".$apt[6];
+                                            echo "<br>StudentID: ".$apt[5];
 
                                             $hasApt = true;
                                         }
