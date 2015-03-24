@@ -315,24 +315,24 @@ echo"</body>";
                                             $studentMajor = $studentInfo[4];
                                             $studentRank = $studentInfo[5];
 
-                                            echo "<li data-toggle='popover'>".$startTime." - ".$endTime."</li>";
+                                            echo "<li>".$startTime." - ".$endTime."</li>";
                                             
                                             // student info popover
-                                            //echo "<div class = 'container'>";
+                                            echo "<div class = 'container'>";
                                                     echo "<button type='button' class='btn btn-sm btn-info' data-toggle='popover' title='Popover title'"; 
 
                                                         // get student info
                                                         echo "data-content=";
 
-                                                        echo "Name: ".$studentFullname;
-                                                        echo "ID: ".$studentID;
-                                                        echo "Major: ".$studentMajor;
-                                                        echo "Rank:".$studentRank;
+                                                        echo "Name: ".$studentFullname."<br>";
+                                                        echo "ID: ".$studentID."<br>";
+                                                        echo "Major: ".$studentMajor."<br>";
+                                                        echo "Rank:".$studentRank."<br>";
                                                             
                                                         echo ">";
 
                                                     echo "Detail</button>";
-                                            //echo "</div>";
+                                            echo "</div>";
 
                                             //echo "<a data-container='body' data-toggle='popover' data-placement='bottom' data-trigger='hover'>StudentID:$apt[5]</a>";
                                             echo "<br>";
