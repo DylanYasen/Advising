@@ -300,10 +300,7 @@ echo"</body>";
 
                                             echo "<li>".$startTime." - ".$endTime."</li>";
                                             
-                                            echo "<button type='button' class='btn btn-success' title='Popover title'  data-container='body' data-toggle='popover' data-placement='bottom' 
-                                              data-content='底部的 Popover 中的一些内容'>
-                                              底部的 Popover
-                                           </button>";
+                                            echo "<button type='button' class='btn btn-lg btn-danger' data-toggle='popover' title='Popover title' data-content='And here's some amazing content. It's very engaging. Right?'>Click to toggle popover</button>";
 
                                             //echo "<a data-container='body' data-toggle='popover' data-placement='bottom' data-trigger='hover'>StudentID:$apt[5]</a>";
                                             echo "<br>";
@@ -367,11 +364,6 @@ echo"</body>";
     
     </div>
 </div>
-
-<script>$(function () 
-      { $("[data-toggle='popover']").popover();
-      });
-   </script>
 
 <!-- Load javascript required for Bootstrap animation-->
 <script src="https://code.jquery.com/jquery.js"></script>
