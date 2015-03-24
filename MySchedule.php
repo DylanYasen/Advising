@@ -363,7 +363,7 @@ echo"</body>";
                                                     $printedHeading = true;
 
                                                     echo "<button type='button' class='btn btn-xs btn-info' data-toggle='popover' data-placement='bottom' title='Student Info' data-html='true' 
-                                                           data-content= ";
+                                                           data-content= '";
 
                                                            $hasApt = true;
                                                 }
@@ -381,10 +381,10 @@ echo"</body>";
                                                 $studentMajor = $studentInfo[3];
                                                 $studentRank = $studentInfo[4];
 
-                                                echo 'Name: $studentFullname <br /> 
+                                                echo "Name: $studentFullname <br /> 
                                                                            ID: $studentID <br />
                                                                            Major: $studentMajor <br />
-                                                                           Rank: $studentRank <br /><br />   ';
+                                                                           Rank: $studentRank <br /><br />";
                                                            
 
                                             }
