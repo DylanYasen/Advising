@@ -355,7 +355,9 @@ echo"</body>";
                                             $rs = $COMMON->executeQuery($sql,$_SERVER["SCRIPT_NAME"]);
 
                                             $info = $COMMON->getDataArray($rs);
+                                            var_dump($info);
 
+                                            /*
                                             $counter = 1;
                                             foreach ($info as $i) {
                                                 $studentInfo[$counter] = $i;
@@ -397,6 +399,7 @@ echo"</body>";
                                             
                                     echo "</ul>";
                                 }
+                                */
 
                                 if(!$hasApt)
                                     echo "No Appointments";
