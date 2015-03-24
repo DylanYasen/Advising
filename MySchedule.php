@@ -238,26 +238,53 @@ echo"</body>";
 
 <div class = "container">
     <div class = "row">
-        <div class = "col-sm-6 col-xs-12">
+       
+        <div class = "col-sm-3 col-xs-6">
             <div class="panel panel-info">
                 <div class="panel-heading">
-                    <h3 class="panel-title">fir </h3>
+                    <h3 class="panel-title">Monday</h3>
+                </div>
+                    <div class="panel-body">The client should continue with its request.</div>
+            </div>
+        </div>
+
+         <div class = "col-sm-3 col-xs-6">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Tuesday</h3>
+                </div>
+                    <div class="panel-body">The client should continue with its request.</div>
+            </div>
+        </div>
+
+        <div class = "col-sm-3 col-xs-6">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Wednesday</h3>
+                </div>
+                    <div class="panel-body">The client should continue with its request.</div>
+            </div>
+        </div>
+
+        <div class = "col-sm-3 col-xs-6">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Thrusday</h3>
+                </div>
+                    <div class="panel-body">The client should continue with its request.</div>
+            </div>
+        </div>
+
+        <div class = "col-sm-3 col-xs-6">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h3 class="panel-title">Friday</h3>
                 </div>
                     <div class="panel-body">The client should continue with its request.</div>
             </div>
         </div>
     </div>
 
-    <div class = "row">
-        <div class = "col-sm-6 col-xs-12">
-            <div class="panel panel-info">
-                <div class="panel-heading">
-                    <h3 class="panel-title">fir </h3>
-                </div>
-                    <div class="panel-body">The client should continue with its request.</div>
-            </div>
-        </div>
-    </div>
 </div>
 
 <!-- Load javascript required for Bootstrap animation-->
