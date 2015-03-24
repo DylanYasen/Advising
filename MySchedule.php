@@ -308,12 +308,12 @@ echo"</body>";
 
                                             $studentInfo = $COMMON->getDataArray($rs);
                                             $studentInfo = $studentInfo[1];
-                                            $studentID = $studentInfo[1];
-                                            $studentFirstname = $studentInfo[2];
-                                            $studentLastname = $studentInfo[3];
+                                            $studentID = $studentInfo[0];
+                                            $studentFirstname = $studentInfo[1];
+                                            $studentLastname = $studentInfo[2];
                                             $studentFullname = $studentFirstname." ".$studentLastname;
-                                            $studentMajor = $studentInfo[4];
-                                            $studentRank = $studentInfo[5];
+                                            $studentMajor = $studentInfo[3];
+                                            $studentRank = $studentInfo[4];
 
                                             var_dump($studentFullname);
 
