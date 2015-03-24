@@ -381,10 +381,10 @@ echo"</body>";
                                                 $studentMajor = $studentInfo[3];
                                                 $studentRank = $studentInfo[4];
 
-                                                echo "'Name: $studentFullname <br /> 
+                                                echo 'Name: $studentFullname <br /> 
                                                                            ID: $studentID <br />
                                                                            Major: $studentMajor <br />
-                                                                           Rank: $studentRank <br /><br />   ";
+                                                                           Rank: $studentRank <br /><br />   ';
                                                            
 
                                             }
