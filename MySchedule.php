@@ -281,19 +281,29 @@ echo"</body>";
                 </div>
                     <?php
 
-                        //var_dump($apts[1]);
-                        foreach ($apts as $apt) {
+                        echo "<div class='panel-body'>";
+                        $hasApt = false;
 
-                            $day = $apt[1];
+                                //var_dump($apts[1]);
+                                foreach ($apts as $apt) {
 
-                            if($day== 1)
-                                echo "<div class='panel-body'>$apt[3]</div>";
+                                    $day = $apt[1];
+                                    echo "<ul>";
+                                    
+                                        if($day== 1)
+                                        {
+                                            echo "<li>$apt[3]</li>";
+                                            echo "<li role="presentation"  class="divider"></li>"
+                                            $hasApt = true;
+                                        }
+                                            
 
-                            echo "<br>";
-                            //var_dump($apt);
-                            //echo "<div class='panel-body'>$apt[3]</div>";
-                            //echo "<br>";
-                        }
+                                    echo "</ul>";
+                                }
+                                
+                                if(!$hasApt)
+                                    echo "No Appointments";
+                        echo "</div>";
                     ?>
             </div>
         </div>
