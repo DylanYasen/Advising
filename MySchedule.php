@@ -360,7 +360,7 @@ echo"</body>";
                                     $day = $apt[1];
                                     echo "<ul>";
                                     
-                                        if($day == 1)
+                                        if($day == 2)
                                         {
                                             $startTime = $apt[2];
                                             $startTime = substr($startTime,0,5);
@@ -429,7 +429,7 @@ echo"</body>";
                                     $day = $apt[1];
                                     echo "<ul>";
                                     
-                                        if($day == 1)
+                                        if($day == 3)
                                         {
                                             $startTime = $apt[2];
                                             $startTime = substr($startTime,0,5);
@@ -498,7 +498,7 @@ echo"</body>";
                                     $day = $apt[1];
                                     echo "<ul>";
                                     
-                                        if($day == 1)
+                                        if($day == 4)
                                         {
                                             $startTime = $apt[2];
                                             $startTime = substr($startTime,0,5);
@@ -567,7 +567,7 @@ echo"</body>";
                                     $day = $apt[1];
                                     echo "<ul>";
                                     
-                                        if($day == 1)
+                                        if($day == 4)
                                         {
                                             $startTime = $apt[2];
                                             $startTime = substr($startTime,0,5);
@@ -619,7 +619,6 @@ echo"</body>";
                     ?>
             </div>
         </div>
-       
        
     </div>
 </div>
