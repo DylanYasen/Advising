@@ -300,7 +300,7 @@ echo"</body>";
 
                                             echo "<li>".$startTime." - ".$endTime."</li>";
                                             echo "<a id='popover' data-trigger='hover'>'StudentID:'.$apt[5]</a>";
-                                            echo "<br>"
+                                            echo "<br>";
                                             $hasApt = true;
                                         }
                                             
