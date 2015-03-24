@@ -315,7 +315,7 @@ echo"</body>";
                                             $studentMajor = $studentInfo[4];
                                             $studentRank = $studentInfo[5];
 
-                                            echo "<li >".$startTime." - ".$endTime."</li>";
+                                            echo "<li data-toggle='popover'>".$startTime." - ".$endTime."</li>";
                                             
                                             // student info popover
                                             //echo "<div class = 'container'>";
