@@ -25,7 +25,7 @@ session_start();
     $rs = $COMMON->executeQuery($sql,$_SERVER["SCRIPT_NAME"]);
 
     $apts = $COMMON->getDataArray($rs);
-    //var_dump($apts[1]);
+    var_dump($apts);
 
     // ---- group appointments ---- //
     $sql = "SELECT * FROM AppointmentGroup WHERE Advisor_ID = '$advisorID' ORDER BY Day ASC, StartTime ASC";
