@@ -279,7 +279,16 @@ echo"</body>";
         <div class = "<col-sm-2 col-xs-2">
             <div class="panel panel-info">
                 <div class="panel-heading">
-                    <h3 class="panel-title">Monday <?php echo"<button type='button' class='btn btn-xs'>Print</button>";?></h3>
+                    <h3 class="panel-title">Monday 
+                        <form action = "Printer.php" method ="post">
+                            <?php
+                            echo "<input type='hidden' name = 'apts' value = $apts>";
+                            echo "<input type='hidden' name = 'groupApts' value = $groupApts>";
+                            echo "<input type='hidden' name = 'day' value = 1>";
+                            echo "<button type='submit' class='btn btn-xs'>Print</button>";
+                            ?>
+                        </form>
+                    </h3>
                 </div>
                     <?php
                         echo "<div class='panel-body'>";
