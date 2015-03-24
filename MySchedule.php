@@ -315,7 +315,7 @@ echo"</body>";
                                             $studentMajor = $studentInfo[4];
                                             $studentRank = $studentInfo[5];
 
-                                            var_dump($studentFullname)
+                                            var_dump($studentFullname);
 
                                             echo "<li>".$startTime." - ".$endTime."</li>";
                                             
