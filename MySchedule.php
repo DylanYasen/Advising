@@ -307,6 +307,7 @@ echo"</body>";
                                             $rs = $COMMON->executeQuery($sql,$_SERVER["SCRIPT_NAME"]);
 
                                             $studentInfo = $COMMON->getDataArray($rs);
+                                            $studentInfo = $COMMON->getSingleData($studentInfo);
                                             var_dump($studentInfo[1]);
 
 
