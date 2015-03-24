@@ -1,7 +1,5 @@
 
 <?php 
-var_dump($_POST);
-
  include('src/CommonMethods.php');
 
     $debug = false;
@@ -25,7 +23,8 @@ var_dump($_POST);
     $groupApts = $COMMON->getDataArray($rs);
 
     echo "Individual Advising";
-     echo "==============";
+    echo "<br>"
+    echo "==============";
     echo "<ul>";
     foreach ($apts as $apt) {
 
@@ -52,16 +51,17 @@ var_dump($_POST);
 
 		echo "<li>Time: ".$startTime." - ".$endTime."</li>";
     	echo "<li>Student Name: ".$studentFullname."</li>";
-    	echo "<li>ID: ".$studentID."<li>";
-    	echo "<li>Major: ".$studentMajor."<li>";
+    	echo "<li>ID: ".$studentID."</li>";
+    	echo "<li>Major: ".$studentMajor."</li>";
     	echo "<li>Rank: ".$studentRank."</li>";
     	echo "<br>"; 
         echo "<br>";
     	}
      echo "</ul>";
 
-    echo"<br><br>";
+    echo"<br>";
     echo "Group Advising";
+    echo "<br>"
     echo "==============";
     echo "<ul>";
     foreach ($groupApts as $apt) {
@@ -97,12 +97,13 @@ var_dump($_POST);
             $studentRank = $studentInfo[4];
 
             echo "<li>Student Name: ".$studentFullname."</li>";
-            echo "<li>ID: ".$studentID."<li>";
-            echo "<li>Major: ".$studentMajor."<li>";
+            echo "<li>ID: ".$studentID."</li>";
+            echo "<li>Major: ".$studentMajor."</li>";
             echo "<li>Rank: ".$studentRank."</li>";
-            echo "<br>"; 
             echo "<br>";
         }
+        echo "<br>";
+        echo "<br>";
     }
     echo "</ul>";
 ?>
