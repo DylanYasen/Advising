@@ -299,7 +299,13 @@ echo"</body>";
                                             $endTime = substr($endTime,0,5);
 
                                             echo "<li>".$startTime." - ".$endTime."</li>";
-                                            echo "<a data-container='body' data-toggle='popover' data-placement='bottom' data-trigger='hover'>StudentID:$apt[5]</a>";
+                                            
+                                            echo "<button type='button' class='btn btn-success' title='Popover title'  data-container='body' data-toggle='popover' data-placement='bottom' 
+                                              data-content='底部的 Popover 中的一些内容'>
+                                              底部的 Popover
+                                           </button>";
+
+                                            //echo "<a data-container='body' data-toggle='popover' data-placement='bottom' data-trigger='hover'>StudentID:$apt[5]</a>";
                                             echo "<br>";
                                             $hasApt = true;
                                         }
