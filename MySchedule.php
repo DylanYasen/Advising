@@ -315,6 +315,8 @@ echo"</body>";
                                             $studentMajor = $studentInfo[4];
                                             $studentRank = $studentInfo[5];
 
+                                            var_dump($studentFullname)
+
                                             echo "<li>".$startTime." - ".$endTime."</li>";
                                             
                                             // student info popover
@@ -324,10 +326,10 @@ echo"</body>";
                                                         // get student info
                                                         echo "data-content=";
 
-                                                        echo "Name: ".$studentFullname."<br>";
-                                                        echo "ID: ".$studentID."<br>";
-                                                        echo "Major: ".$studentMajor."<br>";
-                                                        echo "Rank:".$studentRank."<br>";
+                                                        echo "Name: ".$studentFullname;
+                                                        echo "ID: ".$studentID;
+                                                        echo "Major: ".$studentMajor;
+                                                        echo "Rank:".$studentRank;
                                                             
                                                         echo ">";
 
