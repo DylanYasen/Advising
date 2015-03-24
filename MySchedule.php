@@ -276,7 +276,7 @@ echo"</body>";
 <div class = "container">
     <div class = "row">
        
-        <div class = "<col-sm-4 col-xs-4">
+        <div class = "<col-sm-2 col-xs-2">
             <div class="panel panel-info">
                 <div class="panel-heading">
                     <h3 class="panel-title">Monday</h3>
@@ -344,10 +344,10 @@ echo"</body>";
             </div>
         </div>
 
-         <div class = "<col-sm-4 col-xs-4">
+         <div class = "<col-sm-2 col-xs-2">
             <div class="panel panel-info">
                 <div class="panel-heading">
-                    <h3 class="panel-title">Monday</h3>
+                    <h3 class="panel-title">Tuesday</h3>
                 </div>
                     <?php
 
@@ -413,10 +413,10 @@ echo"</body>";
             </div>
         </div>
 
-         <div class = "<col-sm-4 col-xs-4">
+         <div class = "<col-sm-2 col-xs-2">
             <div class="panel panel-info">
                 <div class="panel-heading">
-                    <h3 class="panel-title">Monday</h3>
+                    <h3 class="panel-title">Wednesday</h3>
                 </div>
                     <?php
 
@@ -482,10 +482,10 @@ echo"</body>";
             </div>
         </div>
 
-         <div class = "<col-sm-4 col-xs-4">
+         <div class = "<col-sm-2 col-xs-2">
             <div class="panel panel-info">
                 <div class="panel-heading">
-                    <h3 class="panel-title">Monday</h3>
+                    <h3 class="panel-title">Thursday</h3>
                 </div>
                     <?php
 
@@ -551,10 +551,10 @@ echo"</body>";
             </div>
         </div>
 
-        <div class = "<col-sm-4 col-xs-4">
+        <div class = "<col-sm-2 col-xs-2">
             <div class="panel panel-info">
                 <div class="panel-heading">
-                    <h3 class="panel-title">Monday</h3>
+                    <h3 class="panel-title">Friday</h3>
                 </div>
                     <?php
 
@@ -567,7 +567,7 @@ echo"</body>";
                                     $day = $apt[1];
                                     echo "<ul>";
                                     
-                                        if($day == 4)
+                                        if($day == 5)
                                         {
                                             $startTime = $apt[2];
                                             $startTime = substr($startTime,0,5);
