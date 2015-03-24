@@ -364,6 +364,13 @@ echo"</body>";
                                             }
                                             var_dump($Infos);
 
+                                            /*
+                                            foreach($Infos as $studentInfo){
+
+                                                for($i = )
+
+                                            }
+                                            */
 
 
                                             /*
