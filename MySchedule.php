@@ -300,9 +300,9 @@ echo"</body>";
                                             $endTime = $apt[3];
                                             $endTime = substr($endTime,0,5);
 
-                                            echo "<li>".$startTime." - ".$endTime."</li>";
+                                            echo "<li >".$startTime." - ".$endTime."</li>";
                                             
-                                            echo "<button type='button' id = 'popoverInfo' class='btn btn-sm btn-danger' data-toggle='popover' title='Popover title' data-content='And here's some amazing content. It's very engaging. Right?'>Click to toggle popover</button>";
+                                            echo "<button type='button' id = 'popoverInfo' class='btn btn-xs btn-primary' data-toggle='popover' title='Popover title' data-content='And here's some amazing content. It's very engaging. Right?'>Detail</button>";
 
                                             //echo "<a data-container='body' data-toggle='popover' data-placement='bottom' data-trigger='hover'>StudentID:$apt[5]</a>";
                                             echo "<br>";
