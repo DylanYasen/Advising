@@ -323,8 +323,11 @@ echo"</body>";
                                                             data-content= 'Name: '.$studentFullname."<br/>\n"
                                                                            .'ID: '.$studentID."<br/>\n"
                                                                            .'Major: '.$studentMajor."<br/>\n"
-                                                                           .'Rank: '$studentRank."<br/>\n>";
-                                                                            .' >
+                                                                           .'Rank: '.$studentRank."<br/>\n"
+                                                                           .'>";
+                                                                            
+                                                                           //>".''';
+                                                                            //.' >
 
                                                             echo "Detail</button>"; 
 
