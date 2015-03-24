@@ -48,11 +48,7 @@ session_start();
 
     <link href="css/main.css" rel="stylesheet">
 
-    <script type="text/javascript">
-        $(function () {
-            $('[data-toggle="popover"]').popover()
-        })
-    </script>
+   
 
 </head>
 
@@ -306,7 +302,7 @@ echo"</body>";
 
                                             echo "<li>".$startTime." - ".$endTime."</li>";
                                             
-                                            echo "<button type='button' class='btn btn-sm btn-danger' data-toggle='popover' title='Popover title' data-content='And here's some amazing content. It's very engaging. Right?'>Click to toggle popover</button>";
+                                            echo "<button type='button' id = 'popoverInfo' class='btn btn-sm btn-danger' data-toggle='popover' title='Popover title' data-content='And here's some amazing content. It's very engaging. Right?'>Click to toggle popover</button>";
 
                                             //echo "<a data-container='body' data-toggle='popover' data-placement='bottom' data-trigger='hover'>StudentID:$apt[5]</a>";
                                             echo "<br>";
@@ -373,6 +369,19 @@ echo"</body>";
 
 <!-- Load javascript required for Bootstrap animation-->
 <script src="https://code.jquery.com/jquery.js"></script>
+
+
+<script>
+//    $('document').ready(function(){
+  //      $('popoverInfo').popover();
+   // });
+</script>
+
+ <script type="text/javascript">
+        $(function () {
+            $('[data-toggle="popover"]').popover();
+        })
+    </script>
 
 <!-- Latest compiled and minified JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
