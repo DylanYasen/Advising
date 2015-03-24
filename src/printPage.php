@@ -54,7 +54,7 @@ var_dump($_POST);
     	echo "Student Name: ".$studentFullname."		";
     	echo "ID: ".$studentID."		";
     	echo "Major: ".$studentMajor."		";
-    	echo "Rank: ".$studentRank."<li>";
+    	echo "Rank: ".$studentRank."</li>";
     	echo "<br>"; 
     	}
      echo "</ul>";
