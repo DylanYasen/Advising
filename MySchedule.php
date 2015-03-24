@@ -290,10 +290,17 @@ echo"</body>";
                                     $day = $apt[1];
                                     echo "<ul>";
                                     
-                                        if($day== 1)
+                                        if($day == 1)
                                         {
-                                            echo "<li>$apt[3]</li>";
-                                            echo "<li role='presentation'  class='divider'></li>";
+                                            $startTime = $apt[3];
+                                            $startTime = substr($startTime,0,5)
+
+                                            $endTime = $apt[4];
+                                            $endTime = substr($endTime,0,5)
+
+                                            echo "<li>$startTime." - ".$endTime</li>";
+                                            echo "StudentID: ".$apt[6];
+
                                             $hasApt = true;
                                         }
                                             
