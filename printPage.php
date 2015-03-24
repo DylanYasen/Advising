@@ -23,7 +23,7 @@
     $groupApts = $COMMON->getDataArray($rs);
 
     echo "Individual Advising";
-    echo "<br>"
+    echo "<br>";
     echo "==============";
     echo "<ul>";
     foreach ($apts as $apt) {
@@ -61,7 +61,7 @@
 
     echo"<br>";
     echo "Group Advising";
-    echo "<br>"
+    echo "<br>";
     echo "==============";
     echo "<ul>";
     foreach ($groupApts as $apt) {

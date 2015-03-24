@@ -284,7 +284,7 @@ echo"</body>";
                             <?php
                             echo "<input type='hidden' name = 'advisorID' value = $advisorID>";
                             echo "<input type='hidden' name = 'day' value = 1>";
-                            echo "<button type='submit' class='btn btn-info'>Print</button>";
+                            echo "<button type='submit' class='btn btn-primary btn-xs'>Print</button>";
                             //echo "<class='btn btn-xs btn-primary button type='button'>Print</button>";
                             ?>
                         </form>
