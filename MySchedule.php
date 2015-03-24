@@ -279,10 +279,9 @@ echo"</body>";
         <div class = "<col-sm-2 col-xs-2">
             <div class="panel panel-info">
                 <div class="panel-heading">
-                    <h3 class="panel-title">Monday</h3>
+                    <h3 class="panel-title">Monday <?php echo"<button type='button' class='btn btn-default'>Left</button>";?></h3>
                 </div>
                     <?php
-
                         echo "<div class='panel-body'>";
                         $hasApt = false;
 
@@ -385,46 +384,10 @@ echo"</body>";
                                                                            ID: $studentID <br />
                                                                            Major: $studentMajor <br />
                                                                            Rank: $studentRank <br /><br />";
-                                                           
 
                                             }
                                             echo "'>Detail</button>";
-
-                                            /*
-                                            echo "<li>".$startTime." - ".$endTime."</li>";
-                                            
-                                            // student info popover
-                                            echo "<div class = 'container'>";
-
-                                                foreach($studentInfo as $student){
-
-                                                    if($student == NULL)
-                                                        break;
-
-                                                $hasApt = true;
-                                                $studentID = $student[0];
-                                                $studentFirstname = $student[1];
-                                                $studentLastname = $student[2];
-                                                $studentFullname = $studentFirstname." ".$studentLastname;
-                                                $studentMajor = $student[3];
-                                                $studentRank = $student[4];
-
-                                                    echo "<button type='button' class='btn btn-xs btn-info' data-toggle='popover' data-placement='bottom' title='Student Info' data-html='true' 
-                                                           data-content= 'Name: $studentFullname <br /> 
-                                                                           ID: $studentID <br />
-                                                                           Major: $studentMajor <br />
-                                                                           Rank: $studentRank <br /><br />  ' >
-
-                                                            Detail</button>"; 
-                                                }
-
-                                            echo "</div>";
-
-                                            //echo "<a data-container='body' data-toggle='popover' data-placement='bottom' data-trigger='hover'>StudentID:$apt[5]</a>";
-                                            echo "<br>";
-                                           */ 
                                         }
-                                            
                                     echo "</ul>";
                             }
 
