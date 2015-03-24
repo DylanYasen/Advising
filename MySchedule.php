@@ -357,13 +357,14 @@ echo"</body>";
 
                                             $info = $COMMON->getDataArray($rs);
                                             var_dump($info[1]);
-
-                                            /*
+                                            
                                             $counter = 1;
                                             foreach ($info as $i) {
-                                                $studentInfo[$counter] = $i;
+                                                $Infos[$counter] = $i;
                                             }
+                                            var_dump($Infos);
 
+                                            /*
                                             echo "<li>".$startTime." - ".$endTime."</li>";
                                             
                                             // student info popover
