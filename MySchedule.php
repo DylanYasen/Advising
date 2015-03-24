@@ -283,8 +283,9 @@ echo"</body>";
 
                         //var_dump($apts[1]);
                         foreach ($apts as $apt) {
-
+                            
                             $day = $apt[2];
+                            var_dump($day);
                             if($day== 1)
                                 echo "<div class='panel-body'>$day</div>";
 
