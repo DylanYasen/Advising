@@ -319,17 +319,22 @@ echo"</body>";
                                             
                                             // student info popover
                                             echo "<div class = 'container'>";
-                                                    echo "<button type='button' class='btn btn-lg btn-info' data-toggle='popover' data-placement='bottom' title='Student Info' data-content= 'Name: $studentFullname'"; 
+                                                    echo "<button type='button' class='btn btn-lg btn-info' data-toggle='popover' data-placement='bottom' title='Student Info' 
+                                                            data-content= 'Name: $studentFullname </br> 
+                                                                           ID: $studentID </br>
+                                                                           Major: $studentMajor </br>
+                                                                           Rank: $studentRank </br>  ' >
+
+                                                            Detail</button>"; 
 
                                                         // get student info
+                                                                             /*
                                                         echo 'Name: '.'$studentFullname';
                                                         echo 'ID: '.$studentID;
                                                         echo 'Major: '.$studentMajor;
                                                         echo 'Rank:'.$studentRank;
-                                                            
-                                                        echo ">";
-
-                                                    echo "Detail</button>";
+                                                        */    
+                                                    //echo "Detail</button>";
                                             echo "</div>";
 
                                             //echo "<a data-container='body' data-toggle='popover' data-placement='bottom' data-trigger='hover'>StudentID:$apt[5]</a>";
