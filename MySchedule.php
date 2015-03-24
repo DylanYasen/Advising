@@ -323,7 +323,7 @@ echo"</body>";
                                                            data-content= 'Name: $studentFullname <br /> 
                                                                            ID: $studentID <br />
                                                                            Major: $studentMajor <br />
-                                                                           Rank: $studentRank <br/ >  ' >
+                                                                           Rank: $studentRank <br />  ' >
 
                                                             Detail</button>"; 
 
@@ -414,6 +414,7 @@ echo"</body>";
         $(function () {
             $('[data-toggle="popover"]').popover();
             html: true
+            data-html='true'
         });
     </script>
 
