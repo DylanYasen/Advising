@@ -293,10 +293,10 @@ echo"</body>";
                                         if($day == 1)
                                         {
                                             $startTime = $apt[3];
-                                            $startTime = substr($startTime,0,5)
+                                            $startTime = substr($startTime,0,5);
 
                                             $endTime = $apt[4];
-                                            $endTime = substr($endTime,0,5)
+                                            $endTime = substr($endTime,0,5);
 
                                             echo "<li>$startTime." - ".$endTime</li>";
                                             echo "StudentID: ".$apt[6];
