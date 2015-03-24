@@ -284,7 +284,7 @@ echo"</body>";
                         foreach ($apts[1] as $apt) {
                             var_dump($apt[3]);
                             //echo "<div class='panel-body'>$apt[3]</div>";
-                            echo "<br>";
+                            //echo "<br>";
                         }
                     ?>
             </div>
