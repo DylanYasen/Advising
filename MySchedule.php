@@ -320,12 +320,13 @@ echo"</body>";
                                             // student info popover
                                             echo "<div class = 'container'>";
                                                     echo "<button type='button' class='btn btn-lg btn-info' data-toggle='popover' data-placement='bottom' title='Student Info' 
-                                                            data-content= 'Name: $studentFullname\n
-                                                                           ID: $studentID\n
-                                                                           Major: $studentMajor\n
-                                                                           Rank: $studentRank\n  ' >
+                                                            data-content= 'Name: '.$studentFullname."<br/>\n"
+                                                                           .'ID: '.$studentID."<br/>\n"
+                                                                           .'Major: '.$studentMajor."<br/>\n"
+                                                                           .'Rank: '$studentRank."<br/>\n>";
+                                                                            .' >
 
-                                                            Detail</button>"; 
+                                                            echo "Detail</button>"; 
 
                                                         // get student info
                                                                              /*
