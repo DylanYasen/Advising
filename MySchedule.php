@@ -51,7 +51,10 @@ session_start();
     <script type="text/javascript">
         $(document).ready(function(){
     $('[data-toggle="popover"]').popover({
-        placement : 'top'
+    $(".pop-top").popover({placement : 'top'});
+    $(".pop-right").popover({placement : 'right'});
+    $(".pop-bottom").popover({placement : 'bottom'});
+    $(".pop-left").popover({ placement : 'left'});
     });
 });
         </script>
@@ -372,10 +375,6 @@ echo"</body>";
     
     </div>
 </div>
-
-$(function () {
-  $('[data-toggle="popover"]').popover()
-})
 
 <!-- Load javascript required for Bootstrap animation-->
 <script src="https://code.jquery.com/jquery.js"></script>
