@@ -1,6 +1,5 @@
 <?php
 
-
 //include('src/Validator.php');
 include('src/CommonMethods.php');
 
@@ -33,28 +32,15 @@ include('src/CommonMethods.php');
 	{
 		if($_POST['password'] == $row[0]){
 
-			$sql = "SELECT Firstname FROM Advisor WHERE Username = '$name'";
+			$sql = "SELECT ID FROM Advisor WHERE Username = '$name'";
 			$rs = $COMMON->executeQuery($sql,$_SERVER["SCRIPT_NAME"]);
 
-			$sql = "SELECT Lastname FROM Advisor WHERE Username = '$name'";
-			$rs2 = $COMMON->executeQuery($sql,$_SERVER["SCRIPT_NAME"]);
-
-			$sql = "SELECT ID FROM Advisor WHERE Username = '$name'";
-			$rs3 = $COMMON->executeQuery($sql,$_SERVER["SCRIPT_NAME"]);
-
-			$r = mysql_fetch_row($rs);
-			$firstname =$r[0];
-
-			$r = mysql_fetch_row($rs2);
-			$lastname = $r[0];
-
-			$r = mysql_fetch_row($rs3);
-			$ID = $r[0];
+			$ID = $COMMON->getSingleData($rs);
 
 			//echo "correct";
 			session_start();
-			$_SESSION['firstname'] = $firstname;
-			$_SESSION['lastname'] = $lastname;
+
+			// pass adviosr id
 			$_SESSION['id'] = $ID;
 
 			header("Location:MySchedule.php");

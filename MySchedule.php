@@ -1,5 +1,37 @@
 <?php
 session_start();
+
+    include('src/CommonMethods.php');
+
+    $debug = false;
+    $COMMON = new Common($debug);
+
+    $name = "yadi";
+    $advisorID = $_SESSION['id'];
+
+    // ---- get advisor name info
+    $sql = "SELECT Firstname FROM Advisor WHERE ID = '$advisorID'";
+    $rs = $COMMON->executeQuery($sql,$_SERVER["SCRIPT_NAME"]);
+    $advisorFirstname = $COMMON->getSingleData($rs);
+
+    $sql = "SELECT Lastname FROM Advisor WHERE ID = '$advisorID'";
+    $rs = $COMMON->executeQuery($sql,$_SERVER["SCRIPT_NAME"]);
+    $advisorLastname = $COMMON->getSingleData($rs);
+    // ---------------------------
+
+    // ---- individual appointments ---- //
+    $sql = "SELECT * FROM Appointment WHERE Advisor_ID = '$advisorID' ORDER BY Day ASC, StartTime ASC";
+    $rs = $COMMON->executeQuery($sql,$_SERVER["SCRIPT_NAME"]);
+
+    $apts = $COMMON->getDataArray($rs);
+    var_dump($apts);
+
+    // ---- group appointments ---- //
+    $sql = "SELECT * FROM AppointmentGroup WHERE Advisor_ID = '$advisorID' ORDER BY Day ASC, StartTime ASC";
+    $rs = $COMMON->executeQuery($sql,$_SERVER["SCRIPT_NAME"]);
+
+    $groupApts = $COMMON->getDataArray($rs);
+    var_dump($groupApts);
 ?>
 
 <html>
@@ -26,7 +58,7 @@ session_start();
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
-      </button>
+      </button>d
       <img href="umbc.edu" class="navbar-brand"  src="res/logo.png" >
       
     </div>
@@ -40,8 +72,8 @@ session_start();
       <ul class="nav navbar-nav navbar-right">
 
         <?php
-            $firstname = $_SESSION['firstname'];
-            $lastname = $_SESSION['lastname']; 
+            //$firstname = $_SESSION['firstname'];
+            //$lastname = $_SESSION['lastname']; 
             echo "<li><a href='#'>"."Welcome, ".$_SESSION['firstname']." ". $_SESSION['lastname']."</a></li>";
         ?>
         
@@ -61,17 +93,18 @@ session_start();
 
 
 <?php
+include('src/CommonMethods.php');
+$debug = true;
+$COMMON = new Common($debug); // common methods
+
+$sql = "SELECT StudentName, StartTime, EndTime, AptType FROM AdvisingTimeTable";
+$result = $COMMON->executeQuery($sql,$_SERVER["SCRIPT_NAME"]);
+
 //echo "correct";
 var_dump($_SESSION['id']);
 var_dump($_SESSION['firstname']);
 var_dump($_SESSION['lastname']);
 
-include('src/CommonMethods.php');
-$debug = true;
-$COMMON = new Common($debug); // common methods
-
-$sql = "SELECT ID, StudentName, StartTime, EndTime, AptType FROM AdvisingTimeTable";
-$result = $COMMON->executeQuery($sql,$_SERVER["SCRIPT_NAME"]);
     //echo $result;
 
     $counter = 0;
@@ -80,6 +113,7 @@ $result = $COMMON->executeQuery($sql,$_SERVER["SCRIPT_NAME"]);
         $counter++;
     }
 
+/*
 //<!-- time table -->
   echo "<body>";
   echo"<link rel='stylesheet' type = 'text/css' href='css/timetable.css' >";
@@ -231,15 +265,11 @@ $result = $COMMON->executeQuery($sql,$_SERVER["SCRIPT_NAME"]);
             <td>Header</td>
         </div>
     </tr>
-    */
   echo "</table>";
 echo"</body>";
+*/
 ?>
 
-<?php
-
-    $name = "yadi";
-?>
 
 <div class = "container">
     <div class = "row">
@@ -249,7 +279,9 @@ echo"</body>";
                 <div class="panel-heading">
                     <h3 class="panel-title">Monday</h3>
                 </div>
-                    <div class="panel-body">The client should continue with its request.</div>
+                    <?php
+                        echo "<div class='panel-body'>$name</div>";
+                    ?>
             </div>
         </div>
 
@@ -269,7 +301,9 @@ echo"</body>";
                 <div class="panel-heading">
                     <h3 class="panel-title">Wednesday</h3>
                 </div>
-                    <div class="panel-body">The client should continue with its request.</div>
+                    <?php
+                        echo "<div class='panel-body'>$name</div>";
+                    ?>
             </div>
         </div>
 
@@ -278,7 +312,9 @@ echo"</body>";
                 <div class="panel-heading">
                     <h3 class="panel-title">Thrusday</h3>
                 </div>
-                    <div class="panel-body">The client should continue with its request.</div>
+                    <?php
+                        echo "<div class='panel-body'>$name</div>";
+                    ?>
             </div>
         </div>
 
@@ -287,7 +323,9 @@ echo"</body>";
                 <div class="panel-heading">
                     <h3 class="panel-title">Friday</h3>
                 </div>
-                    <div class="panel-body">The client should continue with its request.</div>
+                    <?php
+                        echo "<div class='panel-body'>$name</div>";
+                    ?>
             </div>
         </div>
     

@@ -30,6 +30,23 @@ class Common
 		return $rs;
 	}		
 
+	function getSingleData($rs){
+
+		$data = mysql_fetch_row($rs);
+        return $data[0];
+	}
+
+
+	function getDataArray($rs){
+
+		$counter = 1;
+	    while($r = mysql_fetch_row($rs)) {
+	        $data[$counter] = $r; 
+	        $counter++;
+	    }
+
+	}
+
 } // ends class, NEEDED!!
 
 ?>
