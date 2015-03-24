@@ -51,11 +51,4 @@ include('src/CommonMethods.php');
 		}
 	}
 
-/*
-	if($VALIDATOR->Validate( $_POST['username'],$_POST['password']))
-		 header("Location:index.php");
-
-	else
-		header("Location:MySchedule.php");
-*/
 ?>

@@ -148,7 +148,7 @@ session_start();
                                                            data-content= 'Name: $studentFullname <br /> 
                                                                            ID: $studentID <br />
                                                                            Major: $studentMajor <br />
-                                                                           Rank: $studentRank <br />  ' >
+                                                                           Rank: $studentRank <br />' >
 
                                                             Detail</button>"; 
 
@@ -186,9 +186,9 @@ session_start();
                                                 if(!$printedHeading){
                                                     echo "<li>".$startTime." - ".$endTime."</li>";
                                                     $printedHeading = true;
-
+                                                    echo "<div class = 'container'>";
                                                     echo "<button type='button' class='btn btn-xs btn-info' data-toggle='popover' data-placement='bottom' title='Student Info' data-html='true' 
-                                                           data-content= '";
+                                                           data-content='";
 
                                                            $hasApt = true;
                                                 }
@@ -212,7 +212,8 @@ session_start();
                                                                            Rank: $studentRank <br /><br />";
 
                                             }
-                                            echo "'>Detail</button>";
+                                                        echo "'>Detail</button>";
+                                                echo "</div>";
                                         }
                                     echo "</ul>";
                             }
