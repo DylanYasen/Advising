@@ -304,7 +304,7 @@ echo"</body>";
                                             
                                             echo "<div class = 'container'>";
                                                     echo "<button type='button' class='btn btn-xs btn-info' data-toggle='popover' title='Popover title'"; 
-                                                        echo "data-content='And heres some amazing content. Its very engaging. Right?'>";
+                                                        echo "data-content='And heres some amazing content. Its very ensaasdasdasdasdasddffffffffffffffffffffffffffffffffffffffgaging. Right?'>";
                                                     echo "Detail</button>";
                                             echo "</div>";
 
