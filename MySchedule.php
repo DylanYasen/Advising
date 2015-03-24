@@ -384,11 +384,11 @@ echo"</body>";
                                                 echo "'Name: $studentFullname <br /> 
                                                                            ID: $studentID <br />
                                                                            Major: $studentMajor <br />
-                                                                           Rank: $studentRank <br /><br />   '";
+                                                                           Rank: $studentRank <br /><br />   ";
                                                            
 
                                             }
-                                            echo ">Detail</button>";
+                                            echo "'>Detail</button>";
 
                                             /*
                                             echo "<li>".$startTime." - ".$endTime."</li>";
