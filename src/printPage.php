@@ -4,7 +4,7 @@ var_dump($_POST);
 
  include('src/CommonMethods.php');
 
-    $debug = false;
+    $debug = true;
     $COMMON = new Common($debug);
 
     $advisorID = $_POST['advisorID'];
@@ -24,6 +24,8 @@ var_dump($_POST);
 
     $groupApts = $COMMON->getDataArray($rs);
 
+    var_dump($apts);
+    var_dump($groupApts)
 
     echo "<ul>";
     echo "Individual Advising";
