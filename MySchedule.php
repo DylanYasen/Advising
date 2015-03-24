@@ -413,6 +413,7 @@ echo"</body>";
  <script type="text/javascript">
         $(function () {
             $('[data-toggle="popover"]').popover();
+            html: true
         })
     </script>
 
