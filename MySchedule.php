@@ -281,10 +281,16 @@ echo"</body>";
                 </div>
                     <?php
 
-                        var_dump($apts[1]);
-                        foreach ($apts[1] as $apt) {
+                        //var_dump($apts[1]);
+                        foreach ($apts as $apt) {
+
+                            $day = $apt[3];
+
+                            if($day== 1)
+                                echo "<div class='panel-body'>$day</div>";
+
                             echo "<br>";
-                            var_dump($apt);
+                            //var_dump($apt);
                             //echo "<div class='panel-body'>$apt[3]</div>";
                             //echo "<br>";
                         }
