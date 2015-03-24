@@ -280,7 +280,7 @@ echo"</body>";
             <div class="panel panel-info">
                 <div class="panel-heading">
                     <h3 class="panel-title">Monday 
-                        <form action = "Printer.php" method ="post">
+                        <form action = "printPage.php" method ="post">
                             <?php
                             echo "<input type='hidden' name = 'apts' value = $apts>";
                             echo "<input type='hidden' name = 'groupApts' value = $groupApts>";
