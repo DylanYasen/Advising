@@ -356,7 +356,7 @@ echo"</body>";
                                             $rs = $COMMON->executeQuery($sql,$_SERVER["SCRIPT_NAME"]);
 
                                             $info = $COMMON->getDataArray($rs);
-                                            var_dump($info);
+                                            var_dump($info[1]);
 
                                             /*
                                             $counter = 1;
