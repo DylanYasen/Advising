@@ -25,6 +25,7 @@ var_dump($_POST);
     $groupApts = $COMMON->getDataArray($rs);
 
 
+    echo "<ul>";
     echo "Individual Advising";
     foreach ($apts as $apt) {
 
@@ -49,14 +50,15 @@ var_dump($_POST);
 		$studentMajor = $studentInfo[3];
 		$studentRank = $studentInfo[4];
 
-		echo "Time: ".$startTime." - ".$endTime."		";
+		echo "<li>Time: ".$startTime." - ".$endTime."		";
     	echo "Student Name: ".$studentFullname."		";
     	echo "ID: ".$studentID."		";
     	echo "Major: ".$studentMajor."		";
-    	echo "Rank: ".$studentRank."		";
+    	echo "Rank: ".$studentRank."<li>";
     	echo "<br>"; 
-    	# code...
-    }
+    	}
+     echo "</ul>";
+
 /*
 class Printer
 {	
