@@ -372,9 +372,9 @@ echo"</body>";
 
 
 <script type="text/javascript">
-    $('document').ready(function(){
-        $('#popoverInfo').popover();
-    });
+    //$('document').ready(function(){
+    //    $('#popoverInfo').popover();
+    //});
 </script>
 
  <script type="text/javascript">
