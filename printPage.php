@@ -60,7 +60,7 @@ var_dump($_POST);
     	}
      echo "</ul>";
 
-    echo"<br><br>"
+    echo"<br><br>";
     echo "Group Advising";
     echo "==============";
     echo "<ul>";
