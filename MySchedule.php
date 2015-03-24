@@ -333,6 +333,77 @@ echo"</body>";
                                             echo "<br>";
                                             $hasApt = true;
                                         }
+
+                                // group apt
+                                foreach ($groupApts as $apt) {
+
+                                    $day = $apt[1];
+                                    echo "<ul>";
+                                    
+                                        if($day == 1)
+                                        {
+                                            $startTime = $apt[2];
+                                            $startTime = substr($startTime,0,5);
+
+                                            $endTime = $apt[3];
+                                            $endTime = substr($endTime,0,5);
+
+                                            $studentID = $apt[5];
+
+                                            // get student info
+                                            $sql = "SELECT * FROM Student WHERE ID = '$studentID'";
+                                            $rs = $COMMON->executeQuery($sql,$_SERVER["SCRIPT_NAME"]);
+
+                                            $info = $COMMON->getDataArray($rs);
+
+                                            $counter = 1;
+                                            foreach ($info as $i) {
+                                                $studentInfo[$counter] = $i;
+                                            }
+                                            
+                                            /*
+                                            $studentInfo = $studentInfo[1];
+                                            $studentID = $studentInfo[0];
+                                            $studentFirstname = $studentInfo[1];
+                                            $studentLastname = $studentInfo[2];
+                                            $studentFullname = $studentFirstname." ".$studentLastname;
+                                            $studentMajor = $studentInfo[3];
+                                            $studentRank = $studentInfo[4];
+                                            */
+
+                                            echo "<li>".$startTime." - ".$endTime."</li>";
+                                            
+                                            // student info popover
+                                            echo "<div class = 'container'>";
+
+                                                foreach($studentInfo as $student){
+
+                                                    if($student == NULL)
+                                                        break;
+
+                                                $hasApt = true;
+                                                $studentID = $student[0];
+                                                $studentFirstname = $student[1];
+                                                $studentLastname = $student[2];
+                                                $studentFullname = $studentFirstname." ".$studentLastname;
+                                                $studentMajor = $student[3];
+                                                $studentRank = $student[4];
+
+                                                    echo "<button type='button' class='btn btn-xs btn-info' data-toggle='popover' data-placement='bottom' title='Student Info' data-html='true' 
+                                                           data-content= 'Name: $studentFullname <br /> 
+                                                                           ID: $studentID <br />
+                                                                           Major: $studentMajor <br />
+                                                                           Rank: $studentRank <br /><br />  ' >
+
+                                                            Detail</button>"; 
+                                                }
+
+                                            echo "</div>";
+
+                                            //echo "<a data-container='body' data-toggle='popover' data-placement='bottom' data-trigger='hover'>StudentID:$apt[5]</a>";
+                                            echo "<br>";
+                                            $hasApt = true;
+                                        }
                                             
                                     echo "</ul>";
                                 }
