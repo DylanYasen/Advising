@@ -45,6 +45,7 @@ class Common
 	        $counter++;
 	    }
 
+	    return $data;
 	}
 
 } // ends class, NEEDED!!
