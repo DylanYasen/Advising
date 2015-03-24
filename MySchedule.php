@@ -349,29 +349,49 @@ echo"</body>";
                                             $endTime = $apt[3];
                                             $endTime = substr($endTime,0,5);
 
-                                            $studentID = $apt[5];
+                                            $printedHeading = false;
 
-                                            // get student info
-                                            $sql = "SELECT * FROM Student WHERE ID = '$studentID'";
-                                            $rs = $COMMON->executeQuery($sql,$_SERVER["SCRIPT_NAME"]);
+                                            // ID starts at 6th slot
+                                            for($i = 5; $i < 15; $i++ ){
+                                                $studentID = $apt[$i];
 
-                                            $data = $COMMON->getDataArray($rs);
-                                            //var_dump($data[1]);
-                                            
-                                            $counter = 1;
-                                            foreach ($data as $i) {
-                                                $Infos[$counter] = $i;
+                                                if($studentID == NULL)
+                                                    break;
+
+                                                // print time 
+                                                if(!$printedHeading){
+                                                    echo "<li>".$startTime." - ".$endTime."</li>";
+                                                    $printedHeading = true;
+
+                                                    echo "<button type='button' class='btn btn-xs btn-info' data-toggle='popover' data-placement='bottom' title='Student Info' data-html='true' 
+                                                           data-content= ";
+
+                                                           $hasApt = true;
+                                                }
+
+                                                 // get student info
+                                                $sql = "SELECT * FROM Student WHERE ID = '$studentID'";
+                                                $rs = $COMMON->executeQuery($sql,$_SERVER["SCRIPT_NAME"]);
+
+                                                $studentInfo = $COMMON->getDataArray($rs);
+                                                $studentInfo = $studentInfo[1];
+                                                $studentID = $studentInfo[0];
+                                                $studentFirstname = $studentInfo[1];
+                                                $studentLastname = $studentInfo[2];
+                                                $studentFullname = $studentFirstname." ".$studentLastname;
+                                                $studentMajor = $studentInfo[3];
+                                                $studentRank = $studentInfo[4];
+
+                                                echo "Name: $studentFullname <br /> 
+                                                                           ID: $studentID <br />
+                                                                           Major: $studentMajor <br />
+                                                                           Rank: $studentRank <br /><br />   >"
+                                                           
+
+
+
                                             }
-                                            var_dump($Infos);
-
-                                            /*
-                                            foreach($Infos as $studentInfo){
-
-                                                for($i = )
-
-                                            }
-                                            */
-
+                                            echo "Detail</button>";
 
                                             /*
                                             echo "<li>".$startTime." - ".$endTime."</li>";
@@ -405,7 +425,7 @@ echo"</body>";
 
                                             //echo "<a data-container='body' data-toggle='popover' data-placement='bottom' data-trigger='hover'>StudentID:$apt[5]</a>";
                                             echo "<br>";
-                                           */ $hasApt = true;
+                                           */ 
                                         }
                                             
                                     echo "</ul>";
