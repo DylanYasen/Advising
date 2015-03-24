@@ -259,7 +259,7 @@ echo"</body>";
                     <h3 class="panel-title">Tuesday</h3>
                 </div>
                     <?php
-                        echo "<div class='panel-body'> '$name' </div>";
+                        echo "<div class='panel-body'>$name</div>";
                     ?>
             </div>
         </div>
