@@ -318,7 +318,7 @@ echo"</body>";
                                             echo "<li >".$startTime." - ".$endTime."</li>";
                                             
                                             // student info popover
-                                            echo "<div class = 'container'>";
+                                            //echo "<div class = 'container'>";
                                                     echo "<button type='button' class='btn btn-xs btn-info' data-toggle='popover' title='Popover title'"; 
 
                                                         // get student info
@@ -332,7 +332,7 @@ echo"</body>";
                                                         echo ">";
 
                                                     echo "Detail</button>";
-                                            echo "</div>";
+                                            //echo "</div>";
 
                                             //echo "<a data-container='body' data-toggle='popover' data-placement='bottom' data-trigger='hover'>StudentID:$apt[5]</a>";
                                             echo "<br>";
