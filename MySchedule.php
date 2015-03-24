@@ -59,7 +59,7 @@ session_start();
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
-      </button>d
+      </button>
       <img class="navbar-brand"  src="res/logo.png" >
       
     </div>
