@@ -49,11 +49,12 @@ session_start();
     <link href="css/main.css" rel="stylesheet">
 
     <script type="text/javascript">
-    $(document).ready(function(){
+        $(document).ready(function(){
     $('[data-toggle="popover"]').popover({
         placement : 'top'
     });
 });
+        </script>
 
 </head>
 
