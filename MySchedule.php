@@ -247,6 +247,17 @@ echo"</body>";
             </div>
         </div>
     </div>
+
+    <div class = "row">
+        <div class = "col-sm-6 col-xs-12">
+            <div class="panel panel-info">
+                <div class="panel-heading">
+                    <h3 class="panel-title">fir </h3>
+                </div>
+                    <div class="panel-body">The client should continue with its request.</div>
+            </div>
+        </div>
+    </div>
 </div>
 
 <!-- Load javascript required for Bootstrap animation-->
