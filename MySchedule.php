@@ -243,8 +243,7 @@ echo"</body>";
                 <div class="panel-heading">
                     <h3 class="panel-title">fir </h3>
                 </div>
-                
-                <div class="panel-body">"The client should continue with its request."</div>
+                    <div class="panel-body">The client should continue with its request.</div>
             </div>
         </div>
     </div>
