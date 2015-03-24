@@ -304,7 +304,9 @@ echo"</body>";
 
                                             // get student info
                                             $sql = "SELECT * FROM Student WHERE ID = '$studentID'";
-                                            $studentInfo = $COMMON->getDataArray();
+                                            $rs = $COMMON->executeQuery($sql,$_SERVER["SCRIPT_NAME"]);
+
+                                            $studentInfo = $COMMON->getDataArray($rs);
                                             var_dump($studentInfo);
 
 
