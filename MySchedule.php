@@ -308,20 +308,26 @@ echo"</body>";
 
                                             $studentInfo = $COMMON->getDataArray($rs);
                                             $studentInfo = $studentInfo[1];
-                                            var_dump($studentInfo[1]);
-
-
+                                            $studentID = $studentInfo[1];
+                                            $studentFirstname = $studentInfo[2];
+                                            $studentLastname = $studentInfo[3];
+                                            $studentFullname = $studentFirstname." ".$studentLastname;
+                                            $studentMajor = $studentInfo[4];
+                                            $studentRank = $studentInfo[5];
 
                                             echo "<li >".$startTime." - ".$endTime."</li>";
                                             
+                                            // student info popover
                                             echo "<div class = 'container'>";
                                                     echo "<button type='button' class='btn btn-xs btn-info' data-toggle='popover' title='Popover title'"; 
 
                                                         // get student info
                                                         echo "data-content=";
 
-
-
+                                                        echo "Name: ".$studentFullname;
+                                                        echo "ID: ".$studentID;
+                                                        echo "Major: ".$studentMajor;
+                                                        echo "Rank:".$studentRank;
                                                             
                                                         echo ">";
 
