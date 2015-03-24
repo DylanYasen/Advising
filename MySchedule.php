@@ -48,6 +48,13 @@ session_start();
 
     <link href="css/main.css" rel="stylesheet">
 
+    <script type="text/javascript">
+    $(document).ready(function(){
+    $('[data-toggle="popover"]').popover({
+        placement : 'top'
+    });
+});
+
 </head>
 
 <nav class="navbar navbar-default">
@@ -364,6 +371,10 @@ echo"</body>";
     
     </div>
 </div>
+
+$(function () {
+  $('[data-toggle="popover"]').popover()
+})
 
 <!-- Load javascript required for Bootstrap animation-->
 <script src="https://code.jquery.com/jquery.js"></script>
