@@ -360,16 +360,6 @@ echo"</body>";
                                             foreach ($info as $i) {
                                                 $studentInfo[$counter] = $i;
                                             }
-                                            
-                                            /*
-                                            $studentInfo = $studentInfo[1];
-                                            $studentID = $studentInfo[0];
-                                            $studentFirstname = $studentInfo[1];
-                                            $studentLastname = $studentInfo[2];
-                                            $studentFullname = $studentFirstname." ".$studentLastname;
-                                            $studentMajor = $studentInfo[3];
-                                            $studentRank = $studentInfo[4];
-                                            */
 
                                             echo "<li>".$startTime." - ".$endTime."</li>";
                                             
