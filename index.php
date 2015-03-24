@@ -28,7 +28,7 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <img href="umbc.edu" class="navbar-brand"  src="res/logo.png" >
+      <img class="navbar-brand"  src="res/logo.png" >
             
     </div>
 
