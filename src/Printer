@@ -1,0 +1,23 @@
+<?php 
+
+
+
+class Printer
+{	
+
+	var $outputStr;
+
+	fuction Printer($apts,$groupApts,$day){
+
+		$outputStr += "\t\tIndividual Advising\n";
+
+		foreach($apts as $apt){
+			if($apt)
+
+		}
+		
+	}
+
+}
+
+?>
