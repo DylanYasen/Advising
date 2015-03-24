@@ -320,10 +320,10 @@ echo"</body>";
                                             // student info popover
                                             echo "<div class = 'container'>";
                                                     echo "<button type='button' class='btn btn-lg btn-info' data-toggle='popover' data-placement='bottom' title='Student Info' 
-                                                           data-content= 'Name: $studentFullname <br/> 
-                                                                           ID: $studentID <br/>
-                                                                           Major: $studentMajor <br/>
-                                                                           Rank: $studentRank <br/>  ' >
+                                                           data-content= 'Name: $studentFullname <br /> 
+                                                                           ID: $studentID <br />
+                                                                           Major: $studentMajor <br />
+                                                                           Rank: $studentRank <br/ >  ' >
 
                                                             Detail</button>"; 
 
@@ -414,7 +414,7 @@ echo"</body>";
         $(function () {
             $('[data-toggle="popover"]').popover();
             html: true
-        })
+        });
     </script>
 
 <!-- Latest compiled and minified JavaScript -->
