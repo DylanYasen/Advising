@@ -244,7 +244,7 @@ echo"</body>";
                     <h3 class="panel-title">200 OK</h3>
                 </div>
                 
-                <ul>
+                <ul class="dropdown-menu" role="menu">
                     <li class="panel-body">apt1</li>
                     <li class="divider"></li>
                     <li class="panel-body">apt1</li>
