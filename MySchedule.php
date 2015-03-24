@@ -49,15 +49,10 @@ session_start();
     <link href="css/main.css" rel="stylesheet">
 
     <script type="text/javascript">
-        $(document).ready(function(){
-    $('[data-toggle="popover"]').popover({
-    $(".pop-top").popover({placement : 'top'});
-    $(".pop-right").popover({placement : 'right'});
-    $(".pop-bottom").popover({placement : 'bottom'});
-    $(".pop-left").popover({ placement : 'left'});
-    });
-});
-        </script>
+        $(function () {
+            $('[data-toggle="popover"]').popover()
+        })
+    </script>
 
 </head>
 
@@ -311,7 +306,7 @@ echo"</body>";
 
                                             echo "<li>".$startTime." - ".$endTime."</li>";
                                             
-                                            echo "<button type='button' class='btn btn-lg btn-danger' data-toggle='popover' title='Popover title' data-content='And here's some amazing content. It's very engaging. Right?'>Click to toggle popover</button>";
+                                            echo "<button type='button' class='btn btn-sm btn-danger' data-toggle='popover' title='Popover title' data-content='And here's some amazing content. It's very engaging. Right?'>Click to toggle popover</button>";
 
                                             //echo "<a data-container='body' data-toggle='popover' data-placement='bottom' data-trigger='hover'>StudentID:$apt[5]</a>";
                                             echo "<br>";
