@@ -355,16 +355,16 @@ echo"</body>";
                                             $sql = "SELECT * FROM Student WHERE ID = '$studentID'";
                                             $rs = $COMMON->executeQuery($sql,$_SERVER["SCRIPT_NAME"]);
 
-                                            $info = $COMMON->getDataArray($rs);
-                                            var_dump($info[1]);
+                                            $data = $COMMON->getDataArray($rs);
+                                            //var_dump($data[1]);
                                             
                                             $counter = 1;
-                                            foreach ($info as $i) {
+                                            foreach ($data as $i) {
                                                 $Infos[$counter] = $i;
                                             }
                                             var_dump($Infos);
 
-                                            
+
 
                                             /*
                                             echo "<li>".$startTime." - ".$endTime."</li>";
