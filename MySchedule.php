@@ -293,14 +293,14 @@ echo"</body>";
                                         if($day== 1)
                                         {
                                             echo "<li>$apt[3]</li>";
-                                            echo "<li role="presentation"  class="divider"></li>"
+                                            echo "<li role='presentation'  class='divider'></li>";
                                             $hasApt = true;
                                         }
                                             
 
                                     echo "</ul>";
                                 }
-                                
+
                                 if(!$hasApt)
                                     echo "No Appointments";
                         echo "</div>";
