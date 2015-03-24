@@ -371,10 +371,10 @@ echo"</body>";
 <script src="https://code.jquery.com/jquery.js"></script>
 
 
-<script>
-//    $('document').ready(function(){
-  //      $('popoverInfo').popover();
-   // });
+<script type="text/javascript">
+    $('document').ready(function(){
+        $('#popoverInfo').popover();
+    });
 </script>
 
  <script type="text/javascript">
