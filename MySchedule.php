@@ -241,14 +241,12 @@ echo"</body>";
         <div class = "col-sm-6 col-xs-12">
             <div class="panel panel-info">
                 <div class="panel-heading">
-                    <h3 class="panel-title">200 OK</h3>
+                    <h3 class="panel-title">fir </h3>
                 </div>
                 
-                <ul class="dropdown-menu" role="menu">
-                    <li class="panel-body">apt1</li>
-                    <li class="divider"></li>
-                    <li class="panel-body">apt1</li>
-                </ul>
+                <div class="panel-body">The client should 
+                    <div class="divider"></div>
+                continue with its request.</div>
             </div>
         </div>
     </div>
