@@ -20,8 +20,6 @@ include('src/CommonMethods.php');
 	$sql = "SELECT Password FROM Advisor WHERE Username = '$name'";
 	$result = $COMMON->executeQuery($sql,$_SERVER["SCRIPT_NAME"]);
 
-
-
 	$row = mysql_fetch_row($result);
 
 	if($result== NULL){
