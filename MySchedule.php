@@ -245,7 +245,7 @@ echo"</body>";
                 </div>
                 
                 <div class="panel-body">The client should 
-                    <div class="divider"></div>
+                    <a class="divider"></a>
                 continue with its request.</div>
             </div>
         </div>
