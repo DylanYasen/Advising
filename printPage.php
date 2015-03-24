@@ -25,7 +25,7 @@ var_dump($_POST);
     $groupApts = $COMMON->getDataArray($rs);
 
     var_dump($apts);
-    var_dump($groupApts)
+    var_dump($groupApts);
 
     echo "<ul>";
     echo "Individual Advising";
