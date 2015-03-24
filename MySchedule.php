@@ -302,7 +302,7 @@ echo"</body>";
 
                                             echo "<li >".$startTime." - ".$endTime."</li>";
                                             
-                                            echo "<button type='button' class='btn btn-xs btn-info' data-toggle='popover' title='Popover title' data-content='And here's some amazing content. It's very engaging. Right?'>Detail</button>";
+                                            echo "<button type='button' class='btn btn-xs btn-info' data-toggle='popover' title='Popover title' data-content='And heres some amazing content. Its very engaging. Right?'>Detail</button>";
 
                                             //echo "<a data-container='body' data-toggle='popover' data-placement='bottom' data-trigger='hover'>StudentID:$apt[5]</a>";
                                             echo "<br>";
