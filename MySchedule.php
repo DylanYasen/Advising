@@ -286,11 +286,11 @@ echo"</body>";
                         echo "<div class='panel-body'>";
                         $hasApt = false;
 
+                        echo "<ul>";
                                 //var_dump($apts[1]);
                                 foreach ($apts as $apt) {
 
                                     $day = $apt[1];
-                                    echo "<ul>";
                                     
                                         if($day == 1)
                                         {
@@ -339,7 +339,6 @@ echo"</body>";
                                 foreach ($groupApts as $apt) {
 
                                         $day = $apt[1];
-                                        echo "<ul>";
                                     
                                         if($day == 1)
                                         {
