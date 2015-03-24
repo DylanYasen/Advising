@@ -315,13 +315,11 @@ echo"</body>";
                                             $studentMajor = $studentInfo[3];
                                             $studentRank = $studentInfo[4];
 
-                                            var_dump($studentFullname);
-
                                             echo "<li>".$startTime." - ".$endTime."</li>";
                                             
                                             // student info popover
                                             echo "<div class = 'container'>";
-                                                    echo "<button type='button' class='btn btn-sm btn-info' data-toggle='popover' title='Popover title'"; 
+                                                    echo "<button type='button' class='btn btn-sm btn-info' data-toggle='popover' data-placement='bottom' title='Student Info'"; 
 
                                                         // get student info
                                                         echo "data-content=";
