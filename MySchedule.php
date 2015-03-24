@@ -47,9 +47,7 @@ session_start();
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap-theme.min.css">
 
     <link href="css/main.css" rel="stylesheet">
-
    
-
 </head>
 
 <nav class="navbar navbar-default">
@@ -92,190 +90,10 @@ session_start();
   </div><!-- /.container-fluid -->
 </nav>
 
-
-<?php
-/*
-include('src/CommonMethods.php');
-$debug = true;
-$COMMON = new Common($debug); // common methods
-
-$sql = "SELECT StudentName, StartTime, EndTime, AptType FROM AdvisingTimeTable";
-$result = $COMMON->executeQuery($sql,$_SERVER["SCRIPT_NAME"]);
-
-//echo "correct";
-var_dump($_SESSION['id']);
-var_dump($_SESSION['firstname']);
-var_dump($_SESSION['lastname']);
-
-    //echo $result;
-
-    $counter = 0;
-    while($r = mysql_fetch_row($result)) {
-        $data[$counter] = $r; 
-        $counter++;
-    }
-
-/*
-//<!-- time table -->
-  echo "<body>";
-  echo"<link rel='stylesheet' type = 'text/css' href='css/timetable.css' >";
-  
-  echo"<table width='80%' align = 'center' >";
-
-    //<!-- days -->  
-    echo"<div id ='head_nav'>";
-    echo"<tr>";
-    echo"<th>Time<input type='button' onclick='window.print()' /></th>";
-    echo"<th>Monday</th>";
-    echo"<th>Tuesday</th>";
-    echo"<th>Wednesday</th>";
-    echo"<th>Thrusday</th>";
-    echo"<th>Friday</th>";
-    echo"</tr>";
-    echo"</div>";
-
-    $st = 9;
-    for($t = 0; $t < 8; $t++){
-
-        echo "<tr>";
-
-            $startTime = $st + $t;
-            $time = $startTime. ":00 am";
-
-            if($startTime > 12){
-                $time =  ($startTime-12). ":00 pm";
-            }
-
-            echo "<th>";
-            echo $time;
-            
-                    for($day = 0; $day < 5; $day++){
-                        echo "<td>";
-
-                        $hasApt = false;
-                        
-                        foreach ($data as $row) {
-                            $studentName = $row[1];
-                            $dataStartTime = $row[2];
-                            $dataEndTime = $row[3];
-                            $dataAptType = $row[4]; 
-                            $dataDay = $row[5]; 
-
-                            if($dataDay == $day){
-
-                                // match start time
-                                if($dataStartTime == $t){
-                                    echo("Start:".$studentName."</td>");
-                                    $hasApt = true;
-                                    break;
-                                }
-
-                                // match end time
-                                else if($dataEndTime == $t){
-                                    echo("End:".$studentName."</td>");
-                                    $hasApt = true;
-                                    break;
-                                }
-                            }
-                            //echo("<td>".$row[5]."</td><br>");
-                        }
-
-                        if(!$hasApt){
-                            echo "</td>";
-                            $hasApt = false;
-                        }
-                    }
-
-            echo "</th>";
-        echo "</tr>";
-    }
-
-    /*
-     <tr>
-        <th>9:00 - 10:00</th>
-        
-            <td>Physics-1</td>
-            <td>English</td>
-            <td title="No Class" class="Holiday"></td>
-            <td>Chemestry-1</td>
-            <td>Alzebra</td>
-        </div>
-    </tr>
-
-    <tr>
-        <th>10:00 - 11:00</th>
-        
-            <td>Physics-1</td>
-            <td>English</td>
-            <td title="No Class" class="Holiday"></td>
-            <td>Chemestry-1</td>
-            <td>Alzebra</td>
-        </div>
-    </tr>
-
-    <tr>
-        <th>11:00 - 12:00</td>
-        
-            <td>Math-2</td>
-            <td>Chemestry-2</td>
-            <td>Physics-1</td>
-            <td>Hindi</td>
-            <td>English</td>
-        </div>
-    </tr>
-
-    <tr>
-        <th>12:00 - 01:00</td>
-        
-            <td>Hindi</td>
-            <td>English</td>
-            <td>Math-1</td>
-            <td>Chemistry</td>
-            <td>Physics</td>
-        </div>
-    </tr>
-
-    <tr>
-        <th>01:00 - 02:00</td>
-        
-            <td>Cumm. Skill</td>
-            <td>Sports</td>
-            <td>English</td>
-            <td>Computer Lab</td>
-            <td>Header</td>
-        </div>
-    </tr>
-
-    <tr>
-        <th>02:00 - 03:00</td>
-        
-            <td>Header</td>
-            <td>Header</td>
-            <td>Header</td>
-            <td>Header</td>
-            <td>Header</td>
-        </div>
-    </tr>
-
-    <tr>
-        <th>03:00 - 04:00</td>
-        
-            <td>Header</td>
-            <td>Header</td>
-            <td>Header</td>
-            <td>Header</td>
-            <td>Header</td>
-        </div>
-    </tr>
-  echo "</table>";
-echo"</body>";
-*/
-?>
-
-
 <div class = "container">
     <div class = "row">
        
+        <!-- Monday -->
         <div class = "<col-sm-2 col-xs-2">
             <div class="panel panel-info">
                 <div class="panel-heading">
@@ -285,7 +103,6 @@ echo"</body>";
                             echo "<input type='hidden' name = 'advisorID' value = $advisorID>";
                             echo "<input type='hidden' name = 'day' value = 1>";
                             echo "<button type='submit' class='btn btn-primary btn-xs'>Print</button>";
-                            //echo "<class='btn btn-xs btn-primary button type='button'>Print</button>";
                             ?>
                         </form>
                     </h3>
@@ -407,22 +224,30 @@ echo"</body>";
                     ?>
             </div>
         </div>
-
-         <div class = "<col-sm-2 col-xs-2">
+    
+    <!-- Tuesday -->
+        <div class = "<col-sm-2 col-xs-2">
             <div class="panel panel-info">
                 <div class="panel-heading">
-                    <h3 class="panel-title">Tuesday</h3>
+                    <h3 class="panel-title">Tuesday 
+                        <form action = "printPage.php" method ="post">
+                            <?php
+                            echo "<input type='hidden' name = 'advisorID' value = $advisorID>";
+                            echo "<input type='hidden' name = 'day' value = 2>";
+                            echo "<button type='submit' class='btn btn-primary btn-xs'>Print</button>";
+                            ?>
+                        </form>
+                    </h3>
                 </div>
                     <?php
-
                         echo "<div class='panel-body'>";
                         $hasApt = false;
 
+                        echo "<ul>";
                                 //var_dump($apts[1]);
                                 foreach ($apts as $apt) {
 
                                     $day = $apt[1];
-                                    echo "<ul>";
                                     
                                         if($day == 2)
                                         {
@@ -465,10 +290,65 @@ echo"</body>";
                                             echo "<br>";
                                             $hasApt = true;
                                         }
-                                            
-
-                                    echo "</ul>";
                                 }
+
+                                // group apt
+                                foreach ($groupApts as $apt) {
+
+                                        $day = $apt[1];
+                                    
+                                        if($day == 2)
+                                        {
+                                            $startTime = $apt[2];
+                                            $startTime = substr($startTime,0,5);
+
+                                            $endTime = $apt[3];
+                                            $endTime = substr($endTime,0,5);
+
+                                            $printedHeading = false;
+
+                                            // ID starts at 6th slot
+                                            for($i = 5; $i < 15; $i++ ){
+                                                $studentID = $apt[$i];
+
+                                                if($studentID == NULL)
+                                                    break;
+
+                                                // print time 
+                                                if(!$printedHeading){
+                                                    echo "<li>".$startTime." - ".$endTime."</li>";
+                                                    $printedHeading = true;
+
+                                                    echo "<button type='button' class='btn btn-xs btn-info' data-toggle='popover' data-placement='bottom' title='Student Info' data-html='true' 
+                                                           data-content= '";
+
+                                                           $hasApt = true;
+                                                }
+
+                                                 // get student info
+                                                $sql = "SELECT * FROM Student WHERE ID = '$studentID'";
+                                                $rs = $COMMON->executeQuery($sql,$_SERVER["SCRIPT_NAME"]);
+
+                                                $studentInfo = $COMMON->getDataArray($rs);
+                                                $studentInfo = $studentInfo[1];
+                                                $studentID = $studentInfo[0];
+                                                $studentFirstname = $studentInfo[1];
+                                                $studentLastname = $studentInfo[2];
+                                                $studentFullname = $studentFirstname." ".$studentLastname;
+                                                $studentMajor = $studentInfo[3];
+                                                $studentRank = $studentInfo[4];
+
+                                                echo "Name: $studentFullname <br /> 
+                                                                           ID: $studentID <br />
+                                                                           Major: $studentMajor <br />
+                                                                           Rank: $studentRank <br /><br />";
+
+                                            }
+                                            echo "'>Detail</button>";
+                                        }
+                                    echo "</ul>";
+                            }
+
 
                                 if(!$hasApt)
                                     echo "No Appointments";
@@ -477,21 +357,29 @@ echo"</body>";
             </div>
         </div>
 
-         <div class = "<col-sm-2 col-xs-2">
+    <!-- Wednesday -->
+        <div class = "<col-sm-2 col-xs-2">
             <div class="panel panel-info">
                 <div class="panel-heading">
-                    <h3 class="panel-title">Wednesday</h3>
+                    <h3 class="panel-title">Wednesday 
+                        <form action = "printPage.php" method ="post">
+                            <?php
+                            echo "<input type='hidden' name = 'advisorID' value = $advisorID>";
+                            echo "<input type='hidden' name = 'day' value = 3>";
+                            echo "<button type='submit' class='btn btn-primary btn-xs'>Print</button>";
+                            ?>
+                        </form>
+                    </h3>
                 </div>
                     <?php
-
                         echo "<div class='panel-body'>";
                         $hasApt = false;
 
+                        echo "<ul>";
                                 //var_dump($apts[1]);
                                 foreach ($apts as $apt) {
 
                                     $day = $apt[1];
-                                    echo "<ul>";
                                     
                                         if($day == 3)
                                         {
@@ -534,10 +422,65 @@ echo"</body>";
                                             echo "<br>";
                                             $hasApt = true;
                                         }
-                                            
-
-                                    echo "</ul>";
                                 }
+
+                                // group apt
+                                foreach ($groupApts as $apt) {
+
+                                        $day = $apt[1];
+                                    
+                                        if($day == 3)
+                                        {
+                                            $startTime = $apt[2];
+                                            $startTime = substr($startTime,0,5);
+
+                                            $endTime = $apt[3];
+                                            $endTime = substr($endTime,0,5);
+
+                                            $printedHeading = false;
+
+                                            // ID starts at 6th slot
+                                            for($i = 5; $i < 15; $i++ ){
+                                                $studentID = $apt[$i];
+
+                                                if($studentID == NULL)
+                                                    break;
+
+                                                // print time 
+                                                if(!$printedHeading){
+                                                    echo "<li>".$startTime." - ".$endTime."</li>";
+                                                    $printedHeading = true;
+
+                                                    echo "<button type='button' class='btn btn-xs btn-info' data-toggle='popover' data-placement='bottom' title='Student Info' data-html='true' 
+                                                           data-content= '";
+
+                                                           $hasApt = true;
+                                                }
+
+                                                 // get student info
+                                                $sql = "SELECT * FROM Student WHERE ID = '$studentID'";
+                                                $rs = $COMMON->executeQuery($sql,$_SERVER["SCRIPT_NAME"]);
+
+                                                $studentInfo = $COMMON->getDataArray($rs);
+                                                $studentInfo = $studentInfo[1];
+                                                $studentID = $studentInfo[0];
+                                                $studentFirstname = $studentInfo[1];
+                                                $studentLastname = $studentInfo[2];
+                                                $studentFullname = $studentFirstname." ".$studentLastname;
+                                                $studentMajor = $studentInfo[3];
+                                                $studentRank = $studentInfo[4];
+
+                                                echo "Name: $studentFullname <br /> 
+                                                                           ID: $studentID <br />
+                                                                           Major: $studentMajor <br />
+                                                                           Rank: $studentRank <br /><br />";
+
+                                            }
+                                            echo "'>Detail</button>";
+                                        }
+                                    echo "</ul>";
+                            }
+
 
                                 if(!$hasApt)
                                     echo "No Appointments";
@@ -546,21 +489,30 @@ echo"</body>";
             </div>
         </div>
 
-         <div class = "<col-sm-2 col-xs-2">
+
+    <!-- Thursday -->
+        <div class = "<col-sm-2 col-xs-2">
             <div class="panel panel-info">
                 <div class="panel-heading">
-                    <h3 class="panel-title">Thursday</h3>
+                    <h3 class="panel-title">Thursday 
+                        <form action = "printPage.php" method ="post">
+                            <?php
+                            echo "<input type='hidden' name = 'advisorID' value = $advisorID>";
+                            echo "<input type='hidden' name = 'day' value = 4>";
+                            echo "<button type='submit' class='btn btn-primary btn-xs'>Print</button>";
+                            ?>
+                        </form>
+                    </h3>
                 </div>
                     <?php
-
                         echo "<div class='panel-body'>";
                         $hasApt = false;
 
+                        echo "<ul>";
                                 //var_dump($apts[1]);
                                 foreach ($apts as $apt) {
 
                                     $day = $apt[1];
-                                    echo "<ul>";
                                     
                                         if($day == 4)
                                         {
@@ -603,10 +555,65 @@ echo"</body>";
                                             echo "<br>";
                                             $hasApt = true;
                                         }
-                                            
-
-                                    echo "</ul>";
                                 }
+
+                                // group apt
+                                foreach ($groupApts as $apt) {
+
+                                        $day = $apt[1];
+                                    
+                                        if($day == 4)
+                                        {
+                                            $startTime = $apt[2];
+                                            $startTime = substr($startTime,0,5);
+
+                                            $endTime = $apt[3];
+                                            $endTime = substr($endTime,0,5);
+
+                                            $printedHeading = false;
+
+                                            // ID starts at 6th slot
+                                            for($i = 5; $i < 15; $i++ ){
+                                                $studentID = $apt[$i];
+
+                                                if($studentID == NULL)
+                                                    break;
+
+                                                // print time 
+                                                if(!$printedHeading){
+                                                    echo "<li>".$startTime." - ".$endTime."</li>";
+                                                    $printedHeading = true;
+
+                                                    echo "<button type='button' class='btn btn-xs btn-info' data-toggle='popover' data-placement='bottom' title='Student Info' data-html='true' 
+                                                           data-content= '";
+
+                                                           $hasApt = true;
+                                                }
+
+                                                 // get student info
+                                                $sql = "SELECT * FROM Student WHERE ID = '$studentID'";
+                                                $rs = $COMMON->executeQuery($sql,$_SERVER["SCRIPT_NAME"]);
+
+                                                $studentInfo = $COMMON->getDataArray($rs);
+                                                $studentInfo = $studentInfo[1];
+                                                $studentID = $studentInfo[0];
+                                                $studentFirstname = $studentInfo[1];
+                                                $studentLastname = $studentInfo[2];
+                                                $studentFullname = $studentFirstname." ".$studentLastname;
+                                                $studentMajor = $studentInfo[3];
+                                                $studentRank = $studentInfo[4];
+
+                                                echo "Name: $studentFullname <br /> 
+                                                                           ID: $studentID <br />
+                                                                           Major: $studentMajor <br />
+                                                                           Rank: $studentRank <br /><br />";
+
+                                            }
+                                            echo "'>Detail</button>";
+                                        }
+                                    echo "</ul>";
+                            }
+
 
                                 if(!$hasApt)
                                     echo "No Appointments";
@@ -614,22 +621,30 @@ echo"</body>";
                     ?>
             </div>
         </div>
-
+ 
+    <!-- Friday -->
         <div class = "<col-sm-2 col-xs-2">
             <div class="panel panel-info">
                 <div class="panel-heading">
-                    <h3 class="panel-title">Friday</h3>
+                    <h3 class="panel-title">Friday 
+                        <form action = "printPage.php" method ="post">
+                            <?php
+                            echo "<input type='hidden' name = 'advisorID' value = $advisorID>";
+                            echo "<input type='hidden' name = 'day' value = 5>";
+                            echo "<button type='submit' class='btn btn-primary btn-xs'>Print</button>";
+                            ?>
+                        </form>
+                    </h3>
                 </div>
                     <?php
-
                         echo "<div class='panel-body'>";
                         $hasApt = false;
 
+                        echo "<ul>";
                                 //var_dump($apts[1]);
                                 foreach ($apts as $apt) {
 
                                     $day = $apt[1];
-                                    echo "<ul>";
                                     
                                         if($day == 5)
                                         {
@@ -672,10 +687,65 @@ echo"</body>";
                                             echo "<br>";
                                             $hasApt = true;
                                         }
-                                            
-
-                                    echo "</ul>";
                                 }
+
+                                // group apt
+                                foreach ($groupApts as $apt) {
+
+                                        $day = $apt[1];
+                                    
+                                        if($day == 5)
+                                        {
+                                            $startTime = $apt[2];
+                                            $startTime = substr($startTime,0,5);
+
+                                            $endTime = $apt[3];
+                                            $endTime = substr($endTime,0,5);
+
+                                            $printedHeading = false;
+
+                                            // ID starts at 6th slot
+                                            for($i = 5; $i < 15; $i++ ){
+                                                $studentID = $apt[$i];
+
+                                                if($studentID == NULL)
+                                                    break;
+
+                                                // print time 
+                                                if(!$printedHeading){
+                                                    echo "<li>".$startTime." - ".$endTime."</li>";
+                                                    $printedHeading = true;
+
+                                                    echo "<button type='button' class='btn btn-xs btn-info' data-toggle='popover' data-placement='bottom' title='Student Info' data-html='true' 
+                                                           data-content= '";
+
+                                                           $hasApt = true;
+                                                }
+
+                                                 // get student info
+                                                $sql = "SELECT * FROM Student WHERE ID = '$studentID'";
+                                                $rs = $COMMON->executeQuery($sql,$_SERVER["SCRIPT_NAME"]);
+
+                                                $studentInfo = $COMMON->getDataArray($rs);
+                                                $studentInfo = $studentInfo[1];
+                                                $studentID = $studentInfo[0];
+                                                $studentFirstname = $studentInfo[1];
+                                                $studentLastname = $studentInfo[2];
+                                                $studentFullname = $studentFirstname." ".$studentLastname;
+                                                $studentMajor = $studentInfo[3];
+                                                $studentRank = $studentInfo[4];
+
+                                                echo "Name: $studentFullname <br /> 
+                                                                           ID: $studentID <br />
+                                                                           Major: $studentMajor <br />
+                                                                           Rank: $studentRank <br /><br />";
+
+                                            }
+                                            echo "'>Detail</button>";
+                                        }
+                                    echo "</ul>";
+                            }
+
 
                                 if(!$hasApt)
                                     echo "No Appointments";
@@ -689,13 +759,6 @@ echo"</body>";
 
 <!-- Load javascript required for Bootstrap animation-->
 <script src="https://code.jquery.com/jquery.js"></script>
-
-
-<script type="text/javascript">
-    //$('document').ready(function(){
-    //    $('#popoverInfo').popover();
-    //});
-</script>
 
  <script type="text/javascript">
         $(function () {
