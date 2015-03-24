@@ -26,7 +26,6 @@ session_start();
 
     $apts = $COMMON->getDataArray($rs);
     var_dump($apts[1]);
-    var_dump($apts[1][1]);
 
     // ---- group appointments ---- //
     $sql = "SELECT * FROM AppointmentGroup WHERE Advisor_ID = '$advisorID' ORDER BY Day ASC, StartTime ASC";
@@ -281,7 +280,11 @@ echo"</body>";
                     <h3 class="panel-title">Monday</h3>
                 </div>
                     <?php
-                        echo "<div class='panel-body'>$name</div>";
+
+                        foreach ($apts[1] as $apt) {
+                            echo "<div class='panel-body'>'$apts[3][$apt]'</div>";
+                            echo "<br>";
+                        }
                     ?>
             </div>
         </div>
