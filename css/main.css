@@ -6,6 +6,11 @@ footer{
     background-color: #000000;
 }
 
+li{
+    text-align: center;
+
+}
+
 /*
 ul {
     list-style-type: none;
