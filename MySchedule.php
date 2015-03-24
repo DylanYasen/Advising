@@ -237,7 +237,8 @@ echo"</body>";
 ?>
 <div class = "container">
     <div class = "row">
-        <div class = "col-sm-3 col-xs-5">
+        
+        <div class = "col-sm-3 col-xs-6">
             <div class="panel panel-primary">
                 <div class="panel-heading">
                     <h3 class="panel-title">301 Moved Permanently</h3>
@@ -246,7 +247,7 @@ echo"</body>";
             </div>
         </div>
 
-        <div class = "col-sm-3 col-xs-5">
+        <div class = "col-sm-3 col-xs-6">
             <div class="panel panel-primary">
                 <div class="panel-heading">
                     <h3 class="panel-title">301 Moved Permanently</h3>
@@ -255,7 +256,7 @@ echo"</body>";
             </div>
         </div>
 
-        <div class = "col-sm-3 col-xs-5">
+        <div class = "col-sm-3 col-xs-6">
             <div class="panel panel-primary">
                 <div class="panel-heading">
                     <h3 class="panel-title">301 Moved Permanently</h3>
@@ -264,7 +265,7 @@ echo"</body>";
             </div>
         </div>
 
-        <div class = "col-sm-3 col-xs-5">
+        <div class = "col-sm-3 col-xs-6">
             <div class="panel panel-primary">
                 <div class="panel-heading">
                     <h3 class="panel-title">301 Moved Permanently</h3>
@@ -273,7 +274,7 @@ echo"</body>";
             </div>
         </div>
 
-        <div class = "col-sm-3 col-xs-5">
+        <div class = "col-sm-3 col-xs-6">
             <div class="panel panel-primary">
                 <div class="panel-heading">
                     <h3 class="panel-title">301 Moved Permanently</h3>
@@ -281,6 +282,8 @@ echo"</body>";
                 <div class="panel-body">The requested page has been permanently moved to a new location.</div>
             </div>
         </div>
+
+       
     </div>
 </div>
 
