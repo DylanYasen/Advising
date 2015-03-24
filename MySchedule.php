@@ -368,6 +368,11 @@ echo"</body>";
     </div>
 </div>
 
+<script>$(function () 
+      { $("[data-toggle='popover']").popover();
+      });
+   </script>
+
 <!-- Load javascript required for Bootstrap animation-->
 <script src="https://code.jquery.com/jquery.js"></script>
 
