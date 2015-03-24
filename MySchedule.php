@@ -3,11 +3,12 @@ session_start();
 
     include('src/CommonMethods.php');
 
-    $debug = false;
+    $debug = true;
     $COMMON = new Common($debug);
 
     $name = "yadi";
     $advisorID = $_SESSION['id'];
+    var_dump($advisorID);
 
     // ---- get advisor name info
     $sql = "SELECT Firstname FROM Advisor WHERE ID = '$advisorID'";
